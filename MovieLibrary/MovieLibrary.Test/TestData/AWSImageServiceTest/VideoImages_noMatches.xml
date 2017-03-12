@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2010-11-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"/>
+        </HTTPHeaders>
+        <RequestId>2d114d3c-b918-4438-9f2c-7bcfa2729c34</RequestId>
+        <Arguments>
+            <Argument Name="Operation" Value="ItemSearch"/>
+            <Argument Name="Service" Value="AWSECommerceService"/>
+            <Argument Name="Actor" Value="Schwarenegger"/>
+            <Argument Name="Version" Value="2010-11-01"/>
+            <Argument Name="SearchIndex" Value="Video"/>
+            <Argument Name="Signature" Value="2JAS0l+FLdJk5uMJrPKGalB0iwIwMsPolN24gKlA9ps="/>
+            <Argument Name="AWSAccessKeyId" Value="AKIAJLMJY7B5UY6NRDUQ"/>
+            <Argument Name="Timestamp" Value="2011-05-23T14:38:10.000Z"/>
+            <Argument Name="Title" Value="Der Terminator"/>
+            <Argument Name="ResponseGroup" Value="Images"/>
+        </Arguments>
+        <RequestProcessingTime>0.0238550000000000</RequestProcessingTime>
+    </OperationRequest>
+    <Items>
+        <Request>
+            <IsValid>True</IsValid>
+            <ItemSearchRequest>
+                <Actor>Schwarenegger</Actor>
+                <Condition>New</Condition>
+                <DeliveryMethod>Ship</DeliveryMethod>
+                <MerchantId>Amazon</MerchantId>
+                <ResponseGroup>Images</ResponseGroup>
+                <ReviewSort>-SubmissionDate</ReviewSort>
+                <SearchIndex>Video</SearchIndex>
+                <Title>Der Terminator</Title>
+            </ItemSearchRequest>
+            <Errors>
+                <Error>
+                    <Code>AWS.ECommerceService.NoExactMatches</Code>
+                    <Message>We did not find any matches for your request.</Message>
+                </Error>
+            </Errors>
+        </Request>
+        <TotalResults>0</TotalResults>
+        <TotalPages>0</TotalPages>
+    </Items>
+</ItemSearchResponse>

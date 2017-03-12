@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61334B2F-5EF2-42E3-8959-317582087B6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MovieLibrary.Test</RootNamespace>
+    <AssemblyName>MovieLibrary.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AdminControllerTest.cs" />
+    <Compile Include="Controllers\MediathekControllerTest.cs" />
+    <Compile Include="Daos\AbstractMediaDaoEFTest.cs" />
+    <Compile Include="Daos\AbstractQuoteDaoEFTest.cs" />
+    <Compile Include="Daos\AbstractUserMediaDaoEFTest.cs" />
+    <Compile Include="Daos\BookDaoEFTest.cs" />
+    <Compile Include="Daos\GenericDaoTest.cs" />
+    <Compile Include="Daos\InsertRequestDaoEFTest.cs" />
+    <Compile Include="Daos\MovieDaoEFTest.cs" />
+    <Compile Include="Daos\QuoteBookDaoEFTest.cs" />
+    <Compile Include="Daos\QuoteMovieDaoEFTest.cs" />
+    <Compile Include="Daos\QuoteTV_ShowEFTest.cs" />
+    <Compile Include="Daos\TV_ShowDaoEFTest.cs" />
+    <Compile Include="Daos\UserBookDaoEFTest.cs" />
+    <Compile Include="Daos\UserMovieDaoEFTest.cs" />
+    <Compile Include="Daos\UserTvShowDaoEFTest.cs" />
+    <Compile Include="Integration\AddMediaIntTest.cs" />
+    <Compile Include="Integration\BookToMovieConnIntTest.cs" />
+    <Compile Include="Integration\FriendListIntTest.cs" />
+    <Compile Include="Integration\LoginIntTest.cs" />
+    <Compile Include="Integration\DeleteUserMediaIntTest.cs" />
+    <Compile Include="Integration\AddUserMediaIntTest.cs" />
+    <Compile Include="Integration\AddQuoteIntTest.cs" />
+    <Compile Include="Integration\MediaRequestsIntTest.cs" />
+    <Compile Include="Integration\MedienAusborgenIntTest.cs" />
+    <Compile Include="Integration\RegistrationIntTest.cs" />
+    <Compile Include="Integration\ResetPasswordIntTest.cs" />
+    <Compile Include="Integration\ZitatRankenIntTest.cs" />
+    <Compile Include="Integration\RaitingBeiMedienIntTest.cs" />
+    <Compile Include="Integration\MovieToBookConnIntTest.cs" />
+    <Compile Include="Integration\QuoteSearchIntTest.cs" />
+    <Compile Include="Integration\UserLoeschenIntTest.cs" />
+    <Compile Include="Integration\UserProfilansichtIntTest.cs" />
+    <Compile Include="Integration\UserProfilIntTest.cs" />
+    <Compile Include="Integration\ZitatsucheMeistGesuchteListeIntTest.cs" />
+    <Compile Include="Integration\ZitatsucheListeIntTest.cs" />
+    <Compile Include="Integration\SucheDetailsIntTest.cs" />
+    <Compile Include="Integration\SucheListeIntTest.cs" />
+    <Compile Include="MvcMockHelpers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\QuoteControllerTest.cs" />
+    <Compile Include="Services\AWSImageServiceTest.cs" />
+    <Compile Include="TestUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\MovieLibrary.accessor" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieLibrary\MovieLibrary.csproj">
+      <Project>{FEE64656-6A12-4B23-9A26-6348BFC69F44}</Project>
+      <Name>MovieLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\Microsoft.SqlServer.ConnectionInfo.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Microsoft.SqlServer.Management.Sdk.Sfc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Microsoft.SqlServer.Smo.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Rhino.Mocks.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\AWSImageServiceTest\BookImages_allImageTypes.xml" />
+    <Content Include="TestData\AWSImageServiceTest\BookImages_noMatches.xml" />
+    <Content Include="TestData\AWSImageServiceTest\BookImages_onlyLargeImage.xml" />
+    <Content Include="TestData\AWSImageServiceTest\VideoImages_noMatches.xml" />
+    <Content Include="TestData\AWSImageServiceTest\VideoImages_onlyLargeImage.xml" />
+    <Content Include="TestData\Test_Inserts_MR3.sql" />
+    <Content Include="TestData\Test_Inserts.sql" />
+    <Content Include="TestData\AWSImageServiceTest\VideoImages_allImageTypes.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

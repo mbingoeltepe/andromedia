@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2010-11-01">
+    <OperationRequest>
+        <HTTPHeaders>
+            <Header Name="UserAgent" Value="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0.1) Gecko/20100101 Firefox/4.0.1"/>
+        </HTTPHeaders>
+        <RequestId>e499b131-7cf8-4e23-b1b0-57f470ba4d0a</RequestId>
+        <Arguments>
+            <Argument Name="Operation" Value="ItemSearch"/>
+            <Argument Name="Service" Value="AWSECommerceService"/>
+            <Argument Name="Version" Value="2010-11-01"/>
+            <Argument Name="SearchIndex" Value="Books"/>
+            <Argument Name="Author" Value="King"/>
+            <Argument Name="Signature" Value="l090202vyC/TmoBnLfPqUqpA3knWjC5IWYqBHmP+7Ys="/>
+            <Argument Name="AWSAccessKeyId" Value="AKIAJLMJY7B5UY6NRDUQ"/>
+            <Argument Name="Timestamp" Value="2011-05-23T14:49:04.000Z"/>
+            <Argument Name="Title" Value="In einer kleinen Stadt"/>
+            <Argument Name="ResponseGroup" Value="Images"/>
+        </Arguments>
+        <RequestProcessingTime>0.4078650000000000</RequestProcessingTime>
+    </OperationRequest>
+    <Items>
+        <Request>
+            <IsValid>True</IsValid>
+            <ItemSearchRequest>
+                <Author>King</Author>
+                <Condition>New</Condition>
+                <DeliveryMethod>Ship</DeliveryMethod>
+                <MerchantId>Amazon</MerchantId>
+                <ResponseGroup>Images</ResponseGroup>
+                <ReviewSort>-SubmissionDate</ReviewSort>
+                <SearchIndex>Books</SearchIndex>
+                <Title>In einer kleinen Stadt</Title>
+            </ItemSearchRequest>
+        </Request>
+        <TotalResults>23</TotalResults>
+        <TotalPages>3</TotalPages>
+        <Item>
+            <ASIN>3453433998</ASIN>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/51cpi7TV31L.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">315</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51cpi7TV31L.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">315</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>B004OL2B7Q</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">47</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">101</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">315</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">19</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">47</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">47</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">69</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">101</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51uGyfoAnJL.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">315</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>B001TH53T6</ASIN>
+        </Item>
+        <Item>
+            <ASIN>3453061314</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">48</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">102</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L.jpg</URL>
+                <Height Units="pixels">475</Height>
+                <Width Units="pixels">303</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">19</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">48</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">48</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">70</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">102</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/514XAVQX28L.jpg</URL>
+                        <Height Units="pixels">475</Height>
+                        <Width Units="pixels">303</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>3455037399</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">49</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">105</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL.jpg</URL>
+                <Height Units="pixels">475</Height>
+                <Width Units="pixels">313</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">20</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">49</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">49</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">72</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">105</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/51436PP6GZL.jpg</URL>
+                        <Height Units="pixels">475</Height>
+                        <Width Units="pixels">313</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>3548255531</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">48</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">101</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML.jpg</URL>
+                <Height Units="pixels">475</Height>
+                <Width Units="pixels">301</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">19</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">48</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">48</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">70</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">101</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/414V5TSCMML.jpg</URL>
+                        <Height Units="pixels">475</Height>
+                        <Width Units="pixels">301</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>3453163087</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL75_.gif</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">48</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL160_.gif</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">102</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L.gif</URL>
+                <Height Units="pixels">475</Height>
+                <Width Units="pixels">304</Width>
+            </LargeImage>
+            <ImageSets>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL30_.gif</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">19</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL75_.gif</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">48</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL75_.gif</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">48</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL110_.gif</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">70</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L._SL160_.gif</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">102</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/71529TFDX4L.gif</URL>
+                        <Height Units="pixels">475</Height>
+                        <Width Units="pixels">304</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>B002WGDUWK</ASIN>
+        </Item>
+        <Item>
+            <ASIN>B004EQ8NA0</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">56</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">120</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">375</Width>
+            </LargeImage>
+            <ImageSets>
+                <MerchantId>A3SUOXMDD8R1ZX</MerchantId>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">22</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">56</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">56</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">82</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">120</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">375</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+        <Item>
+            <ASIN>B004EPU4XA</ASIN>
+            <SmallImage>
+                <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL75_.jpg</URL>
+                <Height Units="pixels">75</Height>
+                <Width Units="pixels">56</Width>
+            </SmallImage>
+            <MediumImage>
+                <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL160_.jpg</URL>
+                <Height Units="pixels">160</Height>
+                <Width Units="pixels">120</Width>
+            </MediumImage>
+            <LargeImage>
+                <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL.jpg</URL>
+                <Height Units="pixels">500</Height>
+                <Width Units="pixels">375</Width>
+            </LargeImage>
+            <ImageSets>
+                <MerchantId>A3SUOXMDD8R1ZX</MerchantId>
+                <ImageSet Category="primary">
+                    <SwatchImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL30_.jpg</URL>
+                        <Height Units="pixels">30</Height>
+                        <Width Units="pixels">22</Width>
+                    </SwatchImage>
+                    <SmallImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">56</Width>
+                    </SmallImage>
+                    <ThumbnailImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL75_.jpg</URL>
+                        <Height Units="pixels">75</Height>
+                        <Width Units="pixels">56</Width>
+                    </ThumbnailImage>
+                    <TinyImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL110_.jpg</URL>
+                        <Height Units="pixels">110</Height>
+                        <Width Units="pixels">82</Width>
+                    </TinyImage>
+                    <MediumImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL._SL160_.jpg</URL>
+                        <Height Units="pixels">160</Height>
+                        <Width Units="pixels">120</Width>
+                    </MediumImage>
+                    <LargeImage>
+                        <URL>http://ecx.images-amazon.com/images/I/41ZwFy1EmwL.jpg</URL>
+                        <Height Units="pixels">500</Height>
+                        <Width Units="pixels">375</Width>
+                    </LargeImage>
+                </ImageSet>
+            </ImageSets>
+        </Item>
+    </Items>
+</ItemSearchResponse>

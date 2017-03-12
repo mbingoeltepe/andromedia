@@ -1,0 +1,15 @@
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\Libraries\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\Libraries\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\Libraries\Microsoft.SqlServer.Smo.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\Libraries\Rhino.Mocks.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary.Test.dll.config
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary.Test.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary.Test.pdb
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\Rhino.Mocks.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary.pdb
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary_Accessor.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\bin\Debug\MovieLibrary_Accessor.pdb
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\obj\Debug\MovieLibrary.Test.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary.Test\obj\Debug\MovieLibrary.Test.pdb
