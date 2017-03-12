@@ -1,0 +1,519 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link rel="Stylesheet" type="text/css" href="../../Content/Site.css" />
+    <link rel="shortcut icon" href="../../Content/images/Andromedia.ico" />
+    <link href="../../Content/jquery-ui-1.8.12.custom.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui-1.8.12.custom.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/MicrosoftMvcAjax.debug.js" type="text/javascript"></script>
+    <script src="../../Scripts/MicrosoftAjax.debug.js" type="text/javascript"></script>
+    <script src="../../Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../../Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Content/jquery-ui-1.8.12.custom.css") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/jquery-1.4.1.js") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/jquery-1.4.1.min.js") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/jquery-ui-1.8.12.custom.min.js") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/MicrosoftMvcAjax.debug.js") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/MicrosoftAjax.debug.js") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/MicrosoftAjax.js") %>'></script>
+    <script type="text/javascript" src='<%= Url.Content("~/Scripts/MicrosoftMvcAjax.js") %>'></script>
+    <script type="text/javascript" language="javascript">
+        function register() {
+            $('#registerDiv').dialog({
+                title: 'Registrieren',
+                position: ['right', 'top'],
+                width: 220,
+                height: 250,
+                resizable: false,
+                draggable: false,
+                modal: true
+            });
+            //show: 'fold',
+        }
+
+        function login() {
+            $('#loginDiv').dialog({
+                title: 'Anmelden',
+                position: ['right', 'top'],
+                width: 220,
+                height: 220,
+                resizable: false,
+                draggable: false,
+                modal: true
+            });
+            //show: 'fold',
+        }
+
+        function deleteBookToMovieConn() {
+            var deleteDialog = "#deleteMovieBookConn";
+            $(deleteDialog).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Löschen": function () {
+                        $(deleteDialog + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+        function deleteUserMediaDialog(userMediaId) {
+            var userMedia = "#" + userMediaId;
+            $(userMedia).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Löschen": function () {
+                        $(userMedia + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+        function userLoeschen(userId) {
+            var formDivId = "#" + userId;
+            $(formDivId).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Löschen": function () {
+                        $(formDivId + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+        function zitatRanken(zitatId) {
+            var formDivId = "#" + zitatId;
+            $(formDivId).dialog({
+                height: 450,
+                width: 600,
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Ranken": function () {
+                        $(formDivId + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+        function zitatLoeschen(zitatLoeschenId) {
+            var formDivId = "#" + zitatLoeschenId;
+            $(formDivId).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Ablehnen": function () {
+                        $(formDivId + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+
+        function addUserMedia() {
+            var formDivId = "#addUserMedia";
+            $(formDivId).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Hinzufügen": function () {
+                        $(formDivId + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+        function addQuote() {
+            var formDivId = "#addQuote";
+            $(formDivId).dialog({
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "Hinzufügen": function () {
+                        $(formDivId + "> form").submit();
+                    },
+                    "Abbrechen": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        }
+
+        function enableDropDownBox() {
+            var x = document.getElementById("dropDown");
+            x.disabled = false;
+            x.style.display = "inline";
+            document.getElementById("TextBoxSearch").style["width"] = "300px";
+            document.getElementById("radioQuote").innerHTML = 'Zitate';
+            document.getElementById("radioMedia").innerHTML = '<b>Medien</b>';
+            document.getElementById('TextBoxSearch').focus();
+        }
+
+        function showAddPersonButton() {
+            var submit = document.getElementById("submitButton");
+            submit.style.display = "block";
+        }
+
+        function disableDropDownBox() {
+            var x = document.getElementById("dropDown")
+            x.style.display = "none";
+            x.disabled = true;
+            document.getElementById("TextBoxSearch").style["width"] = "402px";
+            document.getElementById("radioQuote").innerHTML = '<b>Zitate</b>';
+            document.getElementById("radioMedia").innerHTML = 'Medien';
+            document.getElementById('TextBoxSearch').focus();
+        }
+
+        function chooseMediaType() {
+            var choose = "#chooseType"
+            $(choose).dialog({
+                title: 'Bitte Medium auswählen',
+                resizable: false,
+                modal: true,
+                buttons: {/*
+                    "Auswählen": function () {
+                        $(choose + "> form").submit();
+                    }*/
+            }
+        });
+    }
+
+    function openActorDialog() {
+        var addActor = "#addActor"
+        $(addActor).dialog({
+            title: 'Schauspieler hinzufügen',
+            height: 200,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Hinzufügen": function () {
+                    $(addActor + "> form").submit();
+                }
+            }
+        });
+    }
+
+    function openAddMovieDialog() {
+        var addMovie = "#addMovie"
+        $(addMovie).dialog({
+            title: 'Film hinzufügen',
+            height: 300,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Hinzufügen": function () {
+                    $(addMovie + "> form").submit();
+                }
+            }
+        });
+    }
+
+    function addFriendToFriendList(username) {
+        var addFriend = "#" + username;
+        $(addFriend).dialog({
+            height: 150,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Einladen": function () {
+                    $(addFriend + "> form").submit();
+                }
+            }
+        });
+    }
+
+    function showBorrowDetails() {
+        var showDetails = "#borrowDetails";
+        $(showDetails).dialog({
+            title: 'Details des Verborgt-Status',
+            height: 300,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Zurücknehmen": function () {
+                    $(showDetails + "> form").submit();
+                }
+            }
+        });
+    }
+
+    function showBorrowToDialog(userMovie) {
+        var showPopup = "#" + userMovie;
+        $(showPopup).dialog({
+            title: 'Medium Herborgen',
+            height: 350,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Herborgen": function () {
+                    $(showPopup + "> form").submit();
+                }
+            }
+        });
+    }
+
+    function showBorrowRequests() {
+        var showPopup = "#borrowRequests";
+        $(showPopup).dialog({
+            title: 'Ausborge-Anfragen',
+            height: 350,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Schließen": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    }
+
+    function showTakeBackRequests() {
+        var showPopup = "#takeBackRequests";
+        $(showPopup).dialog({
+            title: 'Rücknahme-Anfragen',
+            height: 350,
+            width: 450,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Schließen": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    }
+
+    $(function () {
+        $("#Datepicker").datepicker({ dateFormat: 'dd.MM.yy' });
+    });
+
+    $(function () {
+        $("#DatepickerBeginning").datepicker({ dateFormat: 'dd.MM.yy' });
+    });
+
+    $(function () {
+        $("#DatepickerEnding").datepicker({ dateFormat: 'dd.MM.yy' });
+    });
+
+    </script>
+    <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="document.getElementById('TextBoxSearch').focus();">
+    <div id="top">
+        <ul>
+            <li><span id="loginLink">
+                <% if (Request.IsAuthenticated)
+                   {
+                %>
+                Willkommen, <b>
+                    <%: Html.ActionLink(Page.User.Identity.Name, "ShowProfile", "User", null, new { @class = "whiteFont" })%>
+                    | </b>
+                <%: Html.ActionLink("Abmelden", "LogOff", "LogIn", null, new { @class="whiteFont" })%>
+                <%
+                    }
+                   else
+                   {
+                %>
+                <span class="actionLink">
+                    <!--<a class="whiteFont" href="javascript:login()">Anmelden</a>-->
+                    <%: Html.ActionLink("Anmelden", "SecureLogin", "Login", null, new { @class="whiteFont" }) %>
+                </span>| <span class="actionLink">
+                    <!--<a class="whiteFont" href="javascript:register()">Registrieren</a>-->
+                    <%: Html.ActionLink("Registrieren", "SecureRegister", "Login", null, new { @class="whiteFont" }) %>
+                </span>
+                <% } %>
+            </span>
+                <div id="loginDiv" style="display: none">
+                    <% using (Html.BeginForm("Login", "Login"))
+                       { %>
+                    <label>
+                        E-Mail
+                    </label>
+                    <%: Html.TextBox("TextBoxUsername", null, new { style = "width: 100%" })%>
+                    <label>
+                        Passwort
+                    </label>
+                    <%: Html.Password("TextBoxPassword", null, new { style = "width: 100%" })%>
+                    <div style="font-size: smaller">
+                        <%: Html.CheckBox("RememberCheckBox") %>
+                        <label for="RememberCheckBox">
+                            angemeldet bleiben</label>
+                        <%--<%: Html.Label("Angemeldet bleiben") %>--%>
+                        <br />
+                        <br />
+                    </div>
+                    <input type="submit" value="Anmelden" />
+                    <br />
+                    <br />
+                    <%: Html.ActionLink("Passwort vergessen?", "ForgottenPassword", "Login", null, new { @class = "defaultLink" })%>
+                    <%} %>
+                </div>
+                <div id="registerDiv" style="display: none">
+                    <%--<% using (Html.BeginForm("Register", "Login"))--%>
+                    <% using (Html.BeginForm("SendVerificationEMail", "Login"))
+                       { %>
+                    <label>
+                        E-Mail
+                    </label>
+                    <%: Html.TextBox("TextBoxEMail", null, new { style = "width: 100%" })%>
+                    <label>
+                        Passwort
+                    </label>
+                    <%: Html.Password("TextBoxPassword", null, new { style = "width: 100%" })%>
+                    <label>
+                        Passwort wiederholen
+                    </label>
+                    <%: Html.Password("TextBoxPasswordConfirm", null, new { style = "width: 100%" })%>
+                    <br />
+                    <br />
+                    <input type="submit" value="Registrieren" />
+                    <% } %>
+                </div>
+            </li>
+        </ul>
+        <!--<img alt="Andromedia" src="../../Content/images/Andromedia.ico" width="20px" height="20px" />-->
+        <h1>
+            <%: Html.ActionLink("Andromedia", "Index", "Home", null, new { id="homeLink" })%></h1>
+        <% using (Html.BeginForm("Results", "Search"))
+           { %>
+        <p id="searchBar" class="searchbar">
+            <span style="color: white"><a id="radioQuote" class="whiteFont" href="javascript:disableDropDownBox()">
+                Zitate</a> <b>|</b> <a id="radioMedia" class="whiteFont" href="javascript:enableDropDownBox()">
+                    <b>Medien</b></a> </span>
+            <%: Html.TextBox("TextBoxSearch","", new { style = "width:300px" })%>
+            <%: Html.DropDownList("Types", ViewData["Types"] as SelectList, new { id="dropDown"/*, disabled="disabled"*/ })%>
+            <input type="submit" value="Suchen" />
+        </p>
+        <% } %>
+        <% using (Html.BeginForm("AddMovie", "Home"))
+           { %>
+        <input type="submit" value="Test Film adden" style="float: right; visibility: hidden" />
+        <% } %>
+    </div>
+    <div id="sidebar">
+        <% if (Request.IsAuthenticated)
+           { %>
+        <% if (MovieLibrary.Service.ServicesImpl.MembershipService.Instance.IsAdmin(Page.User.Identity.Name))
+           { %>
+        <b class="sideBarHeading">Admin</b>
+        <ul>
+            <li>
+                <%: Html.ActionLink("Medien Anfragen (" + MovieLibrary.Service.ServicesImpl.InsertRequestService.Instance.GetAllOrderedByRequestDate().Count() + ")", "MediaRequests", "Admin", null, new { @class = "defaultLink" })%>
+            </li>
+            <li>
+                <%: Html.ActionLink("Zitate Anfragen (" + MovieLibrary.Service.ServicesImpl.AllQuotesService.Instance.GetAllNotRankingQuotes("", "", "").Count() + ")", "ShowNotRankingZitate", "Quote", null, new { @class = "defaultLink" })%>
+            </li>
+            <li>
+                <%: Html.ActionLink("User Löschen", "ShowUsers", "Admin", null, new { @class = "defaultLink" })%>
+            </li>
+        </ul>
+        <br />
+        <hr />
+        <br />
+        <%} %>
+        <b class="sideBarHeading">User</b>
+        <ul>
+            <li>
+                <%: Html.ActionLink("Profil", "ShowProfile", "User", null, new { @class = "defaultLink" })%>
+            </li>
+            <li>
+                <%-- <%: Html.ActionLink("Mediathek", "ShowUserMediathek", "User", new { HttpContext.Current.User.Identity.Name })%>--%>
+                <%: Html.ActionLink("Mediathek", "ShowUserMediathek", "User", new { username = HttpContext.Current.User.Identity.Name }, new { @class = "defaultLink" })%>
+            </li>
+            <li>
+                <%: Html.ActionLink("Freunde", "ShowFriends", "User", null, new { @class = "defaultLink" })%>
+            </li>
+            <li>
+                <%: Html.ActionLink("Borge - Verlauf", "ShowBorrowStatistics", "Mediathek", null, new { @class = "defaultLink" })%>
+            </li>
+            <li><a class="defaultLink" href="javascript:chooseMediaType()">Andromedia Erweitern</a>
+                <%--<%: Html.ActionLink("Andromedia erweitern", "ExtendAndromedia", "User", null, new { @class = "defaultLink" }) %>--%>
+            </li>
+        </ul>
+        <br />
+        <hr />
+        <br />
+        <b class="sideBarHeading">Allgemein</b>
+        <% } %>
+        <ul>
+            <li>
+                <%: Html.ActionLink("Top Zitate", "../Quote/TopQuotes", null, new { @class = "defaultLink" })%>
+            </li>
+            <li>
+                <%: Html.ActionLink("Top Bewertet", "../Media/TopRated", null, new { @class = "defaultLink" })%>
+            </li>
+        </ul>
+    </div>
+    <div id="main">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="spacer">
+            <label style="visibility: hidden">
+                -</label>
+        </div>
+    </div>
+    <div id="footer">
+        Andromedia &copy; 2k11
+    </div>
+    <div id="chooseType" style="display: none">
+        <% using (Html.BeginForm("ShowExtendView", "Media"))
+           { %>
+        <input type="radio" value="movie" checked="checked" name="ChooseMedia" id="RadioMovie" />
+        <label for="RadioMovie">
+            Film</label>
+        <br />
+        <input type="radio" value="tvShow" name="ChooseMedia" id="RadioTVShow" />
+        <label for="RadioTVShow">
+            TV Serie</label>
+        <br />
+        <input type="radio" value="book" name="ChooseMedia" id="RadioBook" />
+        <label for="RadioBook">
+            Buch</label>
+        <br />
+        <input type="radio" value="actor" name="ChooseMedia" id="RadioActor" />
+        <label for="RadioActor">
+            Schauspieler</label>
+        <br />
+        <input type="radio" value="author" name="ChooseMedia" id="RadioAuthor" />
+        <label for="RadioAuthor">
+            Autor</label>
+        <br />
+        <input type="submit" value="Auswählen" style="float: right" />
+        <% } %>
+    </div>
+</body>
+</html>

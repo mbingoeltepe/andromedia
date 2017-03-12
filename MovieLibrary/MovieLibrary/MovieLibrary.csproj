@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEE64656-6A12-4B23-9A26-6348BFC69F44}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MovieLibrary</RootNamespace>
+    <AssemblyName>MovieLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Andromedia.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\MediathekController.cs" />
+    <Compile Include="Controllers\QuoteController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Daos\EntityFramework\AbstractPersonDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\AbstractUserMediaDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\ActorDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\AllQuotesDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\AuthorDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\InsertRequestDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\MembershipDao.cs" />
+    <Compile Include="Daos\EntityFramework\UserBookDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\UserMediaDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\UserTvShowDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\UserMovieDaoEF.cs" />
+    <Compile Include="Daos\Interfaces\IActorDao.cs" />
+    <Compile Include="Daos\Interfaces\IAuthorDao.cs" />
+    <Compile Include="Daos\Interfaces\IBookDao.cs" />
+    <Compile Include="Daos\Interfaces\IGenericDao.cs" />
+    <Compile Include="Daos\Interfaces\IInsertRequestDao.cs" />
+    <Compile Include="Daos\Interfaces\IMembershipDao.cs" />
+    <Compile Include="Daos\Interfaces\IMovieDao.cs" />
+    <Compile Include="Daos\Interfaces\IPersonDao.cs" />
+    <Compile Include="Daos\Interfaces\IQuoteBookDao.cs" />
+    <Compile Include="Daos\Interfaces\IQuoteMovieDao.cs" />
+    <Compile Include="Daos\Interfaces\IQuoteTVShowDao.cs" />
+    <Compile Include="Daos\Interfaces\IUserBookDao.cs" />
+    <Compile Include="Daos\Interfaces\IUserMediaDao.cs" />
+    <Compile Include="Daos\Interfaces\IUserMovieDao.cs" />
+    <Compile Include="Daos\Interfaces\ITVShowDao.cs" />
+    <Compile Include="Daos\Interfaces\IUserTvShowDao.cs" />
+    <Compile Include="Helpers\IPrincipalModelBinder.cs" />
+    <Compile Include="Helpers\ContextHelper.cs" />
+    <Compile Include="Daos\EntityFramework\AbstractMediaDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\AbstractQuoteDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\AllMediaDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\BookDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\MovieDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\QuoteAllMediaEF.cs" />
+    <Compile Include="Daos\EntityFramework\QuoteBookDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\QuoteMovieDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\QuoteTV_ShowDaoEF.cs" />
+    <Compile Include="Daos\EntityFramework\TV_ShowDaoEF.cs" />
+    <Compile Include="Daos\Interfaces\IMediaDao.cs" />
+    <Compile Include="Daos\Interfaces\IQuoteDao.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\PaginatedList.cs" />
+    <Compile Include="Helpers\PaginatedTopQuotesList.cs" />
+    <Compile Include="Helpers\RedirectHttps.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BorrowedMediaDetail.cs" />
+    <Compile Include="Models\GenreEnum.cs" />
+    <Compile Include="Models\MediaAufberwahrungsortEnum.cs" />
+    <Compile Include="Models\AbstractMediaDetailsViewModel.cs" />
+    <Compile Include="Models\MediaLib.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaLib.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MediaTypeEnum.cs" />
+    <Compile Include="Models\BookDetailsViewModel.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieDetailsViewModel.cs" />
+    <Compile Include="Models\ProfileMediaViewModel.cs" />
+    <Compile Include="Models\QuoteLanguageEnum.cs" />
+    <Compile Include="Models\MediaImageUserViewModel.cs" />
+    <Compile Include="Models\TopQuotesViewModel.cs" />
+    <Compile Include="Models\TVShowDetailsViewModel.cs" />
+    <Compile Include="Models\TV_Show.cs" />
+    <Compile Include="Models\UserMediaStatusEnum.cs" />
+    <Compile Include="Models\UserMediaStorageDeviceEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\AWSRequestHelper.cs" />
+    <Compile Include="Service\IServices\IImageService.cs" />
+    <Compile Include="Service\IServices\IInsertRequestService.cs" />
+    <Compile Include="Service\IServices\IMediaService.cs" />
+    <Compile Include="Service\IServices\IMembershipService.cs" />
+    <Compile Include="Service\IServices\IPersonService.cs" />
+    <Compile Include="Service\IServices\IQuoteService.cs" />
+    <Compile Include="Service\IServices\IUserMediaService.cs" />
+    <Compile Include="Service\ServicesImpl\AWSImageService.cs" />
+    <Compile Include="Service\Image.cs" />
+    <Compile Include="Service\ServicesImpl\AWSProductService.cs" />
+    <Compile Include="Service\ServicesImpl\InsertRequestService.cs" />
+    <Compile Include="Service\ServicesImpl\MediaService.cs" />
+    <Compile Include="Service\ServicesImpl\PersonService.cs" />
+    <Compile Include="Service\ServicesImpl\QuotesService.cs" />
+    <Compile Include="Service\ServicesImpl\MembershipService.cs" />
+    <Compile Include="Service\ServicesImpl\UserMediaService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Andromedia.ico" />
+    <Content Include="Content\DetailView.css" />
+    <Content Include="Content\images\Andromedia.ico" />
+    <Content Include="Content\images\delete.gif" />
+    <Content Include="Content\images\noImage.jpg" />
+    <Content Include="Content\images\star.gif" />
+    <Content Include="Content\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\jquery-ui-1.8.12.custom.css" />
+    <Content Include="Views\Admin\MovieRequestForm.ascx" />
+    <Content Include="Views\Admin\TV_ShowRequestForm.ascx" />
+    <Content Include="Views\Admin\UserView.ascx" />
+    <Content Include="Views\Admin\BookRequestForm.ascx" />
+    <Content Include="Views\Error\DefaultError.aspx" />
+    <Content Include="Error\DefaultError.htm" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\MediaLib.edmx.sql" />
+    <Content Include="Scripts\jquery-ui-1.8.12.custom.min.js" />
+    <Content Include="Scripts\jquery.MetaData.js" />
+    <Content Include="Scripts\jquery.rating.css" />
+    <Content Include="Scripts\jquery.rating.js" />
+    <Content Include="Views\Admin\MediaRequests.aspx" />
+    <Content Include="Views\Admin\ShowUsers.aspx" />
+    <Content Include="Views\Error\VerificationError.aspx" />
+    <Content Include="Views\Login\RegisterForm.aspx" />
+    <Content Include="Views\Login\LoginMessage.aspx" />
+    <Content Include="Views\Login\ForgottenPassword.aspx" />
+    <Content Include="Views\Login\RegisterError.aspx" />
+    <Content Include="Views\Login\Login.aspx" />
+    <Content Include="Views\Login\LoginError.aspx" />
+    <Content Include="Views\Login\Register.aspx" />
+    <Content Include="Views\Login\ResetPasswordForm.aspx" />
+    <Content Include="Views\Login\VerifyRegistration.aspx" />
+    <Content Include="Views\Media\ActorAlreadyThere.aspx" />
+    <Content Include="Views\Media\AddActorToAndromedia.aspx" />
+    <Content Include="Views\Media\AddActorToVideo.aspx" />
+    <Content Include="Views\Media\AddAuthorToAndromedia.aspx" />
+    <Content Include="Views\Media\AddAuthorToBook.aspx" />
+    <Content Include="Views\Media\AddBookForMovieView.aspx" />
+    <Content Include="Views\Media\AddBookToAndromedia.aspx" />
+    <Content Include="Views\Media\AddMovieForBookView.aspx" />
+    <Content Include="Views\Media\AddMovieToAndromedia.aspx" />
+    <Content Include="Views\Media\Rating.aspx" />
+    <Content Include="Views\Media\TopRatedMedia.aspx" />
+    <Content Include="Views\Quote\AddQuoteMessage.aspx" />
+    <Content Include="Views\Media\AddTvShowToAndromedia.aspx" />
+    <Content Include="Views\Media\AuthorAlreadyThere.aspx" />
+    <Content Include="Views\Media\PersonList.ascx" />
+    <Content Include="Views\Media\ConfirmationAddedMedia.aspx" />
+    <Content Include="Views\Quote\NotRankingQuotesViews.ascx" />
+    <Content Include="Views\Quote\ShowAllNotRankingQuotes.aspx" />
+    <Content Include="Views\Search\ResultQuotes.aspx" />
+    <Content Include="Views\Shared\BookDetails.aspx" />
+    <Content Include="Views\Shared\Message.aspx" />
+    <Content Include="Views\Shared\SaveFailure.aspx" />
+    <Content Include="Views\Shared\NotAuthorized.aspx" />
+    <Content Include="Views\Shared\MovieDetails.aspx" />
+    <Content Include="Views\Shared\TVShowDetails.aspx" />
+    <Content Include="Views\Quote\ShowQuotesMedia.aspx" />
+    <Content Include="Views\Quote\TopQuotes.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Search\PartialBookResult.ascx" />
+    <Content Include="Views\Search\PartialMovieResult.ascx" />
+    <Content Include="Views\Search\PartialTvShowResult.ascx" />
+    <Content Include="Views\Search\ResultAllMedia.aspx" />
+    <Content Include="Views\Shared\UserBooks.ascx" />
+    <Content Include="Views\Shared\UserMovies.ascx" />
+    <Content Include="Views\Shared\UserTVShows.ascx" />
+    <Content Include="Views\Shared\NotFound.aspx" />
+    <Content Include="Views\User\BorrowedAwayStatistics.ascx" />
+    <Content Include="Views\User\BorrowedFromStatistics.ascx" />
+    <Content Include="Views\User\ExtendAndromedia.aspx" />
+    <Content Include="Views\User\SearchUser.aspx" />
+    <Content Include="Views\User\ShowBorrowDetails.ascx" />
+    <Content Include="Views\User\ShowBorrowStatistics.aspx" />
+    <Content Include="Views\User\ShowFriends.aspx" />
+    <Content Include="Views\User\ShowMediathek.aspx" />
+    <Content Include="Views\User\ShowProfile.aspx" />
+    <Content Include="Views\User\ShowRecommendedMedia.ascx" />
+    <Content Include="Views\User\ShowUserBooks.aspx" />
+    <Content Include="Views\User\ShowUserMovies.aspx" />
+    <Content Include="Views\User\ShowUserTVShows.aspx" />
+    <Content Include="Views\User\UserBookView.ascx" />
+    <Content Include="Views\User\UserMovieView.ascx" />
+    <Content Include="Views\User\UserTvShowView.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Models\MediaLib.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MediaLib.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\ViewMasterPage.Master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>62779</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Andromedia</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MediaLib" Class="ORMapperDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=STEFAN-PC\SQLEXPRESS;Initial Catalog=MediaLib;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MediaLibConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ActorSet" Member="ActorSets">
+    <Type Name="ActorSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="ActorSet_ActorVideo" Member="ActorVideos" ThisKey="Id" OtherKey="Actor_Id" Type="ActorVideo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserSet_Admin" Member="UserSet_Admins">
+    <Type Name="UserSet_Admin">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserSet_UserSet_Admin" Member="UserSet" ThisKey="Id" OtherKey="Id" Type="UserSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActorVideo" Member="ActorVideos">
+    <Type Name="ActorVideo">
+      <Column Name="Actor_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Video_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="ActorSet_ActorVideo" Member="ActorSet" ThisKey="Actor_Id" OtherKey="Id" Type="ActorSet" IsForeignKey="true" />
+      <Association Name="MediaSet_Video_ActorVideo" Member="MediaSet_Video" ThisKey="Video_Id" OtherKey="Id" Type="MediaSet_Video" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AuthorSet" Member="AuthorSets">
+    <Type Name="AuthorSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="AuthorSet_MediaSet_Book" Member="MediaSet_Books" ThisKey="Id" OtherKey="AuthorId" Type="MediaSet_Book" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BookQuoteBook" Member="BookQuoteBooks">
+    <Type Name="BookQuoteBook">
+      <Column Name="Book_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QuoteBook_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaSet_Book_BookQuoteBook" Member="MediaSet_Book" ThisKey="Book_Id" OtherKey="Id" Type="MediaSet_Book" IsForeignKey="true" />
+      <Association Name="QuoteSet_QuoteBook_BookQuoteBook" Member="QuoteSet_QuoteBook" ThisKey="QuoteBook_Id" OtherKey="Id" Type="QuoteSet_QuoteBook" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BorrowedDetailsSet" Member="BorrowedDetailsSets">
+    <Type Name="BorrowedDetailsSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="UserSet_BorrowedDetailsSet" Member="UserSet" ThisKey="UserId" OtherKey="Id" Type="UserSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EpisodeSet" Member="EpisodeSets">
+    <Type Name="EpisodeSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EpisodeSet_QuoteTV_ShowEpisode" Member="QuoteTV_ShowEpisodes" ThisKey="Id" OtherKey="Episode_Id" Type="QuoteTV_ShowEpisode" />
+      <Association Name="SeasonSet_EpisodeSet" Member="SeasonSet" ThisKey="SeasonId" OtherKey="Id" Type="SeasonSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaSet" Member="MediaSets">
+    <Type Name="MediaSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="OriginalTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Genre" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Cover" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MediaSet_MediaSet_Book" Member="MediaSet_Book" ThisKey="Id" OtherKey="Id" Type="MediaSet_Book" Cardinality="One" />
+      <Association Name="MediaSet_MediaSet_Video" Member="MediaSet_Video" ThisKey="Id" OtherKey="Id" Type="MediaSet_Video" Cardinality="One" />
+      <Association Name="MediaSet_QuoteRankingSet" Member="QuoteRankingSets" ThisKey="Id" OtherKey="MediaId" Type="QuoteRankingSet" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaSet_Book" Member="MediaSet_Books">
+    <Type Name="MediaSet_Book">
+      <Column Name="Isbn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AuthorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaSet_Book_BookQuoteBook" Member="BookQuoteBooks" ThisKey="Id" OtherKey="Book_Id" Type="BookQuoteBook" />
+      <Association Name="MediaSet_Book_MediaSet_Movie" Member="MediaSet_Movies" ThisKey="Id" OtherKey="Book_Id" Type="MediaSet_Movie" />
+      <Association Name="MediaSet_Book_UserMediaSet_UserBook" Member="UserMediaSet_UserBooks" ThisKey="Id" OtherKey="BookId" Type="UserMediaSet_UserBook" />
+      <Association Name="AuthorSet_MediaSet_Book" Member="AuthorSet" ThisKey="AuthorId" OtherKey="Id" Type="AuthorSet" IsForeignKey="true" />
+      <Association Name="MediaSet_MediaSet_Book" Member="MediaSet" ThisKey="Id" OtherKey="Id" Type="MediaSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaSet_Movie" Member="MediaSet_Movies">
+    <Type Name="MediaSet_Movie">
+      <Column Name="ReleaseDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Book_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="MediaSet_Movie_QuoteMovieMovie" Member="QuoteMovieMovies" ThisKey="Id" OtherKey="Movie_Id" Type="QuoteMovieMovie" />
+      <Association Name="MediaSet_Book_MediaSet_Movie" Member="MediaSet_Book" ThisKey="Book_Id" OtherKey="Id" Type="MediaSet_Book" IsForeignKey="true" />
+      <Association Name="MediaSet_Video_MediaSet_Movie" Member="MediaSet_Video" ThisKey="Id" OtherKey="Id" Type="MediaSet_Video" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaSet_TV_Show" Member="MediaSet_TV_Shows">
+    <Type Name="MediaSet_TV_Show">
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ShowBeginning" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ShowEnding" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="QuoteTV_ShowId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaSet_TV_Show_SeasonSet" Member="SeasonSets" ThisKey="Id" OtherKey="TV_ShowId" Type="SeasonSet" />
+      <Association Name="MediaSet_Video_MediaSet_TV_Show" Member="MediaSet_Video" ThisKey="Id" OtherKey="Id" Type="MediaSet_Video" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MediaSet_Video" Member="MediaSet_Videos">
+    <Type Name="MediaSet_Video">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaSet_Video_ActorVideo" Member="ActorVideos" ThisKey="Id" OtherKey="Video_Id" Type="ActorVideo" />
+      <Association Name="MediaSet_Video_MediaSet_Movie" Member="MediaSet_Movie" ThisKey="Id" OtherKey="Id" Type="MediaSet_Movie" Cardinality="One" />
+      <Association Name="MediaSet_Video_MediaSet_TV_Show" Member="MediaSet_TV_Show" ThisKey="Id" OtherKey="Id" Type="MediaSet_TV_Show" Cardinality="One" />
+      <Association Name="MediaSet_Video_UserMediaSet_UserVideo" Member="UserMediaSet_UserVideos" ThisKey="Id" OtherKey="VideoId" Type="UserMediaSet_UserVideo" />
+      <Association Name="MediaSet_MediaSet_Video" Member="MediaSet" ThisKey="Id" OtherKey="Id" Type="MediaSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteMovieMovie" Member="QuoteMovieMovies">
+    <Type Name="QuoteMovieMovie">
+      <Column Name="QuoteMovie_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Movie_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaSet_Movie_QuoteMovieMovie" Member="MediaSet_Movie" ThisKey="Movie_Id" OtherKey="Id" Type="MediaSet_Movie" IsForeignKey="true" />
+      <Association Name="QuoteSet_QuoteMovie_QuoteMovieMovie" Member="QuoteSet_QuoteMovie" ThisKey="QuoteMovie_Id" OtherKey="Id" Type="QuoteSet_QuoteMovie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteRankingSet" Member="QuoteRankingSets">
+    <Type Name="QuoteRankingSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ranking" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuoteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MediaId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="MediaSet_QuoteRankingSet" Member="MediaSet" ThisKey="MediaId" OtherKey="Id" Type="MediaSet" IsForeignKey="true" />
+      <Association Name="QuoteSet_QuoteRankingSet" Member="QuoteSet" ThisKey="QuoteId" OtherKey="Id" Type="QuoteSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteSet" Member="QuoteSets">
+    <Type Name="QuoteSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuoteString" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Language" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Invocations" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="QuoteSet_QuoteRankingSet" Member="QuoteRankingSets" ThisKey="Id" OtherKey="QuoteId" Type="QuoteRankingSet" />
+      <Association Name="QuoteSet_QuoteSet_QuoteBook" Member="QuoteSet_QuoteBook" ThisKey="Id" OtherKey="Id" Type="QuoteSet_QuoteBook" Cardinality="One" />
+      <Association Name="QuoteSet_QuoteSet_QuoteMovie" Member="QuoteSet_QuoteMovie" ThisKey="Id" OtherKey="Id" Type="QuoteSet_QuoteMovie" Cardinality="One" />
+      <Association Name="QuoteSet_QuoteSet_QuoteTV_Show" Member="QuoteSet_QuoteTV_Show" ThisKey="Id" OtherKey="Id" Type="QuoteSet_QuoteTV_Show" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteSet_QuoteBook" Member="QuoteSet_QuoteBooks">
+    <Type Name="QuoteSet_QuoteBook">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="QuoteSet_QuoteBook_BookQuoteBook" Member="BookQuoteBooks" ThisKey="Id" OtherKey="QuoteBook_Id" Type="BookQuoteBook" />
+      <Association Name="QuoteSet_QuoteSet_QuoteBook" Member="QuoteSet" ThisKey="Id" OtherKey="Id" Type="QuoteSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteSet_QuoteMovie" Member="QuoteSet_QuoteMovies">
+    <Type Name="QuoteSet_QuoteMovie">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="QuoteSet_QuoteMovie_QuoteMovieMovie" Member="QuoteMovieMovies" ThisKey="Id" OtherKey="QuoteMovie_Id" Type="QuoteMovieMovie" />
+      <Association Name="QuoteSet_QuoteSet_QuoteMovie" Member="QuoteSet" ThisKey="Id" OtherKey="Id" Type="QuoteSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteSet_QuoteTV_Show" Member="QuoteSet_QuoteTV_Shows">
+    <Type Name="QuoteSet_QuoteTV_Show">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="QuoteSet_QuoteTV_Show_QuoteTV_ShowEpisode" Member="QuoteTV_ShowEpisodes" ThisKey="Id" OtherKey="QuoteTV_Show_Id" Type="QuoteTV_ShowEpisode" />
+      <Association Name="QuoteSet_QuoteSet_QuoteTV_Show" Member="QuoteSet" ThisKey="Id" OtherKey="Id" Type="QuoteSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuoteTV_ShowEpisode" Member="QuoteTV_ShowEpisodes">
+    <Type Name="QuoteTV_ShowEpisode">
+      <Column Name="QuoteTV_Show_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Episode_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="EpisodeSet_QuoteTV_ShowEpisode" Member="EpisodeSet" ThisKey="Episode_Id" OtherKey="Id" Type="EpisodeSet" IsForeignKey="true" />
+      <Association Name="QuoteSet_QuoteTV_Show_QuoteTV_ShowEpisode" Member="QuoteSet_QuoteTV_Show" ThisKey="QuoteTV_Show_Id" OtherKey="Id" Type="QuoteSet_QuoteTV_Show" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestSet" Member="RequestSets">
+    <Type Name="RequestSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserTo" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="RequestSet_RequestUserMedia" Member="RequestUserMedias" ThisKey="Id" OtherKey="Request_Id" Type="RequestUserMedia" />
+      <Association Name="UserSet_RequestSet" Member="UserSet" ThisKey="UserId" OtherKey="Id" Type="UserSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestUserMedia" Member="RequestUserMedias">
+    <Type Name="RequestUserMedia">
+      <Column Name="Request_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserMedia_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="RequestSet_RequestUserMedia" Member="RequestSet" ThisKey="Request_Id" OtherKey="Id" Type="RequestSet" IsForeignKey="true" />
+      <Association Name="UserMediaSet_RequestUserMedia" Member="UserMediaSet" ThisKey="UserMedia_Id" OtherKey="Id" Type="UserMediaSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeasonSet" Member="SeasonSets">
+    <Type Name="SeasonSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TV_ShowId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SeasonSet_EpisodeSet" Member="EpisodeSets" ThisKey="Id" OtherKey="SeasonId" Type="EpisodeSet" />
+      <Association Name="MediaSet_TV_Show_SeasonSet" Member="MediaSet_TV_Show" ThisKey="TV_ShowId" OtherKey="Id" Type="MediaSet_TV_Show" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserFriends" Member="UserFriends">
+    <Type Name="UserFriend">
+      <Column Name="User_1_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="User_2_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserSet_UserFriend" Member="UserSet" ThisKey="User_1_Id" OtherKey="Id" Type="UserSet" IsForeignKey="true" />
+      <Association Name="UserSet_UserFriend1" Member="UserSet1" ThisKey="User_2_Id" OtherKey="Id" Type="UserSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMediaSet" Member="UserMediaSets">
+    <Type Name="UserMediaSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StoragePlace" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MediaStatus" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="UserMediaSet_RequestUserMedia" Member="RequestUserMedias" ThisKey="Id" OtherKey="UserMedia_Id" Type="RequestUserMedia" />
+      <Association Name="UserMediaSet_UserMediaSet_UserBook" Member="UserMediaSet_UserBook" ThisKey="Id" OtherKey="Id" Type="UserMediaSet_UserBook" Cardinality="One" />
+      <Association Name="UserMediaSet_UserMediaSet_UserVideo" Member="UserMediaSet_UserVideo" ThisKey="Id" OtherKey="Id" Type="UserMediaSet_UserVideo" Cardinality="One" />
+      <Association Name="UserSet_UserMediaSet" Member="UserSet" ThisKey="UserId" OtherKey="Id" Type="UserSet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMediaSet_UserBook" Member="UserMediaSet_UserBooks">
+    <Type Name="UserMediaSet_UserBook">
+      <Column Name="BookId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserMediaSet_UserMediaSet_UserBook" Member="UserMediaSet" ThisKey="Id" OtherKey="Id" Type="UserMediaSet" IsForeignKey="true" />
+      <Association Name="MediaSet_Book_UserMediaSet_UserBook" Member="MediaSet_Book" ThisKey="BookId" OtherKey="Id" Type="MediaSet_Book" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMediaSet_UserVideo" Member="UserMediaSet_UserVideos">
+    <Type Name="UserMediaSet_UserVideo">
+      <Column Name="StorageType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserMediaSet_UserMediaSet_UserVideo" Member="UserMediaSet" ThisKey="Id" OtherKey="Id" Type="UserMediaSet" IsForeignKey="true" />
+      <Association Name="MediaSet_Video_UserMediaSet_UserVideo" Member="MediaSet_Video" ThisKey="VideoId" OtherKey="Id" Type="MediaSet_Video" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserSet" Member="UserSets">
+    <Type Name="UserSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="UserSet_UserSet_Admin" Member="UserSet_Admin" ThisKey="Id" OtherKey="Id" Type="UserSet_Admin" Cardinality="One" />
+      <Association Name="UserSet_BorrowedDetailsSet" Member="BorrowedDetailsSets" ThisKey="Id" OtherKey="UserId" Type="BorrowedDetailsSet" />
+      <Association Name="UserSet_RequestSet" Member="RequestSets" ThisKey="Id" OtherKey="UserId" Type="RequestSet" />
+      <Association Name="UserSet_UserFriend" Member="UserFriends" ThisKey="Id" OtherKey="User_1_Id" Type="UserFriend" />
+      <Association Name="UserSet_UserFriend1" Member="UserFriends1" ThisKey="Id" OtherKey="User_2_Id" Type="UserFriend" />
+      <Association Name="UserSet_UserMediaSet" Member="UserMediaSets" ThisKey="Id" OtherKey="UserId" Type="UserMediaSet" />
+    </Type>
+  </Table>
+</Database>

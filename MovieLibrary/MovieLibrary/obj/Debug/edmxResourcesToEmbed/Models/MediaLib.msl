@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MediaLibStoreContainer" CdmEntityContainer="MediaLibContainer">
+    <EntitySetMapping Name="EpisodeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Episode)">
+        <MappingFragment StoreEntitySet="EpisodeSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Media)">
+        <MappingFragment StoreEntitySet="MediaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OriginalTitle" ColumnName="OriginalTitle" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Cover" ColumnName="Cover" />
+          <ScalarProperty Name="Pending" ColumnName="Pending" />
+          <ScalarProperty Name="TotalRaters" ColumnName="TotalRaters" />
+          <ScalarProperty Name="AverageRating" ColumnName="AverageRating" />
+          <ScalarProperty Name="AddingDate" ColumnName="AddingDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Video)">
+        <MappingFragment StoreEntitySet="MediaSet_Video">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.TV_Show)">
+        <MappingFragment StoreEntitySet="MediaSet_TV_Show">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShowBeginning" ColumnName="ShowBeginning" />
+          <ScalarProperty Name="ShowEnding" ColumnName="ShowEnding" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Book)">
+        <MappingFragment StoreEntitySet="MediaSet_Book">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Isbn" ColumnName="Isbn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Movie)">
+        <MappingFragment StoreEntitySet="MediaSet_Movie">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuoteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Quote)">
+        <MappingFragment StoreEntitySet="QuoteSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="QuoteString" ColumnName="QuoteString" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Invocations" ColumnName="Invocations" />
+          <ScalarProperty Name="MediaId" ColumnName="MediaId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Character" ColumnName="Character" />
+          <ScalarProperty Name="OccurenceTime" ColumnName="OccurenceTime" />
+          <ScalarProperty Name="Ranking" ColumnName="Ranking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.QuoteMovie)">
+        <MappingFragment StoreEntitySet="QuoteSet_QuoteMovie">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.QuoteTV_Show)">
+        <MappingFragment StoreEntitySet="QuoteSet_QuoteTV_Show">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EpisodeId" ColumnName="EpisodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.QuoteBook)">
+        <MappingFragment StoreEntitySet="QuoteSet_QuoteBook">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeasonSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Season)">
+        <MappingFragment StoreEntitySet="SeasonSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="TV_ShowId" ColumnName="TV_ShowId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="Closed" ColumnName="Closed" />
+          <ScalarProperty Name="VerificationCode" ColumnName="VerificationCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Admin)">
+        <MappingFragment StoreEntitySet="UserSet_Admin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMediaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.UserMedia)">
+        <MappingFragment StoreEntitySet="UserMediaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StoragePlace" ColumnName="StoragePlace" />
+          <ScalarProperty Name="MediaStatus" ColumnName="MediaStatus" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.UserBook)">
+        <MappingFragment StoreEntitySet="UserMediaSet_UserBook">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.UserVideo)">
+        <MappingFragment StoreEntitySet="UserMediaSet_UserVideo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StorageType" ColumnName="StorageType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.UserMovie)">
+        <MappingFragment StoreEntitySet="UserMediaSet_UserMovie">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.UserTV_Show)">
+        <MappingFragment StoreEntitySet="UserMediaSet_UserTV_Show">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SeasonId" ColumnName="SeasonId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BorrowRequestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.BorrowRequest)">
+        <MappingFragment StoreEntitySet="BorrowRequestSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserTo" ColumnName="UserTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BorrowedDetailsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.BorrowedDetails)">
+        <MappingFragment StoreEntitySet="BorrowedDetailsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="BorrowedFromUserId" ColumnName="BorrowedFromUserId" />
+          <ScalarProperty Name="DateOfReturn" ColumnName="DateOfReturn" />
+          <ScalarProperty Name="NameTo" ColumnName="NameTo" />
+          <ScalarProperty Name="TakeBackRequest" ColumnName="TakeBackRequest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsertRequestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.InsertRequest)">
+        <MappingFragment StoreEntitySet="InsertRequestSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RequestDate" ColumnName="RequestDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSet">
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Person)">
+        <MappingFragment StoreEntitySet="PersonSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Actor)">
+        <MappingFragment StoreEntitySet="PersonSet_Actor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(MediaLib.Author)">
+        <MappingFragment StoreEntitySet="PersonSet_Author">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ActorVideo" TypeName="MediaLib.ActorVideo" StoreEntitySet="ActorVideo">
+      <EndProperty Name="Actor">
+        <ScalarProperty Name="Id" ColumnName="Actor_Id" />
+      </EndProperty>
+      <EndProperty Name="Video">
+        <ScalarProperty Name="Id" ColumnName="Video_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BookMovie" TypeName="MediaLib.BookMovie" StoreEntitySet="MediaSet_Movie">
+      <EndProperty Name="Book">
+        <ScalarProperty Name="Id" ColumnName="Book_Id" />
+      </EndProperty>
+      <EndProperty Name="Movie">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+      <Condition ColumnName="Book_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RequestUserMedia" TypeName="MediaLib.RequestUserMedia" StoreEntitySet="BorrowRequestSet">
+      <EndProperty Name="UserMedia">
+        <ScalarProperty Name="Id" ColumnName="UserMedia_Id" />
+      </EndProperty>
+      <EndProperty Name="BorrowRequest">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BorrowedDetailsUserMedia" TypeName="MediaLib.BorrowedDetailsUserMedia" StoreEntitySet="BorrowedDetailsSet">
+      <EndProperty Name="UserMedia">
+        <ScalarProperty Name="Id" ColumnName="UserMedia_Id" />
+      </EndProperty>
+      <EndProperty Name="BorrowedDetails">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="InsertRequestMedia" TypeName="MediaLib.InsertRequestMedia" StoreEntitySet="InsertRequestSet">
+      <EndProperty Name="Media">
+        <ScalarProperty Name="Id" ColumnName="Media_Id" />
+      </EndProperty>
+      <EndProperty Name="InsertRequest">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserUser" TypeName="MediaLib.UserUser" StoreEntitySet="UserUser">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="Friends_Id" />
+      </EndProperty>
+      <EndProperty Name="User1">
+        <ScalarProperty Name="Id" ColumnName="UserUser_User_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorBook" TypeName="MediaLib.AuthorBook" StoreEntitySet="AuthorBook">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="Id" ColumnName="Author_Id" />
+      </EndProperty>
+      <EndProperty Name="Book">
+        <ScalarProperty Name="Id" ColumnName="Book_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserUser1" TypeName="MediaLib.UserUser1" StoreEntitySet="UserUser1">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="UserUser1_User1_Id" />
+      </EndProperty>
+      <EndProperty Name="User1">
+        <ScalarProperty Name="Id" ColumnName="Requestlist_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

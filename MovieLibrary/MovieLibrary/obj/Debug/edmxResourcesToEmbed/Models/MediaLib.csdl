@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MediaLib" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="MediaLibContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EpisodeSet" EntityType="MediaLib.Episode" />
+    <EntitySet Name="MediaSet" EntityType="MediaLib.Media" />
+    <EntitySet Name="QuoteSet" EntityType="MediaLib.Quote" />
+    <EntitySet Name="SeasonSet" EntityType="MediaLib.Season" />
+    <EntitySet Name="UserSet" EntityType="MediaLib.User" />
+    <EntitySet Name="UserMediaSet" EntityType="MediaLib.UserMedia" />
+    <AssociationSet Name="TV_ShowSeason" Association="MediaLib.TV_ShowSeason">
+      <End Role="TV_Show" EntitySet="MediaSet" />
+      <End Role="Season" EntitySet="SeasonSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserUserMedien" Association="MediaLib.UserUserMedien">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="UserMedien" EntitySet="UserMediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="EpisodeSeason" Association="MediaLib.EpisodeSeason">
+      <End Role="Episode" EntitySet="EpisodeSet" />
+      <End Role="Season" EntitySet="SeasonSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserBooksBook" Association="MediaLib.UserBooksBook">
+      <End Role="UserBooks" EntitySet="UserMediaSet" />
+      <End Role="Book" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="ActorVideo" Association="MediaLib.ActorVideo">
+      <End Role="Actor" EntitySet="PersonSet" />
+      <End Role="Video" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="BookMovie" Association="MediaLib.BookMovie">
+      <End Role="Book" EntitySet="MediaSet" />
+      <End Role="Movie" EntitySet="MediaSet" />
+    </AssociationSet>
+    <EntitySet Name="BorrowRequestSet" EntityType="MediaLib.BorrowRequest" />
+    <AssociationSet Name="RequestUser" Association="MediaLib.RequestUser">
+      <End Role="BorrowRequest" EntitySet="BorrowRequestSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="RequestUserMedia" Association="MediaLib.RequestUserMedia">
+      <End Role="BorrowRequest" EntitySet="BorrowRequestSet" />
+      <End Role="UserMedia" EntitySet="UserMediaSet" />
+    </AssociationSet>
+    <EntitySet Name="BorrowedDetailsSet" EntityType="MediaLib.BorrowedDetails" />
+    <AssociationSet Name="BorrowedDetailsUserMedia" Association="MediaLib.BorrowedDetailsUserMedia">
+      <End Role="BorrowedDetails" EntitySet="BorrowedDetailsSet" />
+      <End Role="UserMedia" EntitySet="UserMediaSet" />
+    </AssociationSet>
+    <EntitySet Name="InsertRequestSet" EntityType="MediaLib.InsertRequest" />
+    <AssociationSet Name="InsertRequestMedia" Association="MediaLib.InsertRequestMedia">
+      <End Role="InsertRequest" EntitySet="InsertRequestSet" />
+      <End Role="Media" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="InsertRequestUser" Association="MediaLib.InsertRequestUser">
+      <End Role="InsertRequest" EntitySet="InsertRequestSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserUser" Association="MediaLib.UserUser">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="User1" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="BorrowedDetailsUser" Association="MediaLib.BorrowedDetailsUser">
+      <End Role="BorrowedDetails" EntitySet="BorrowedDetailsSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorBook" Association="MediaLib.AuthorBook">
+      <End Role="Author" EntitySet="PersonSet" />
+      <End Role="Book" EntitySet="MediaSet" />
+    </AssociationSet>
+    <EntitySet Name="PersonSet" EntityType="MediaLib.Person" />
+    <AssociationSet Name="QuoteMovieMovie" Association="MediaLib.QuoteMovieMovie">
+      <End Role="QuoteMovie" EntitySet="QuoteSet" />
+      <End Role="Movie" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="QuoteTV_ShowEpisode" Association="MediaLib.QuoteTV_ShowEpisode">
+      <End Role="QuoteTV_Show" EntitySet="QuoteSet" />
+      <End Role="Episode" EntitySet="EpisodeSet" />
+    </AssociationSet>
+    <AssociationSet Name="QuoteBookBook" Association="MediaLib.QuoteBookBook">
+      <End Role="QuoteBook" EntitySet="QuoteSet" />
+      <End Role="Book" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="QuoteMedia" Association="MediaLib.QuoteMedia">
+      <End Role="Quote" EntitySet="QuoteSet" />
+      <End Role="Media" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="QuoteUser" Association="MediaLib.QuoteUser">
+      <End Role="Quote" EntitySet="QuoteSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserMovieMovie" Association="MediaLib.UserMovieMovie">
+      <End Role="UserMovie" EntitySet="UserMediaSet" />
+      <End Role="Movie" EntitySet="MediaSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserTV_ShowSeason" Association="MediaLib.UserTV_ShowSeason">
+      <End Role="UserTV_Show" EntitySet="UserMediaSet" />
+      <End Role="Season" EntitySet="SeasonSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserUser1" Association="MediaLib.UserUser1">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="User1" EntitySet="UserSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Actor" BaseType="MediaLib.Person">
+    <NavigationProperty Name="Video" Relationship="MediaLib.ActorVideo" FromRole="Actor" ToRole="Video" />
+  </EntityType>
+  <EntityType Name="Book" BaseType="MediaLib.Media">
+    <Property Type="String" Name="Isbn" Nullable="true" />
+    <NavigationProperty Name="UserBook" Relationship="MediaLib.UserBooksBook" FromRole="Book" ToRole="UserBooks" />
+    <NavigationProperty Name="Movie" Relationship="MediaLib.BookMovie" FromRole="Book" ToRole="Movie" />
+    <NavigationProperty Name="Author" Relationship="MediaLib.AuthorBook" FromRole="Book" ToRole="Author" />
+    <NavigationProperty Name="QuoteBook" Relationship="MediaLib.QuoteBookBook" FromRole="Book" ToRole="QuoteBook" />
+  </EntityType>
+  <EntityType Name="Episode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <NavigationProperty Name="Season" Relationship="MediaLib.EpisodeSeason" FromRole="Episode" ToRole="Season" />
+    <Property Type="Int32" Name="SeasonId" Nullable="false" />
+    <NavigationProperty Name="QuoteTV_Show" Relationship="MediaLib.QuoteTV_ShowEpisode" FromRole="Episode" ToRole="QuoteTV_Show" />
+    <Property Type="Int32" Name="Number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Media" Abstract="true">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" />
+    <Property Type="String" Name="OriginalTitle" Nullable="true" />
+    <Property Type="Double" Name="Rating" Nullable="false" DefaultValue="0" />
+    <Property Type="String" Name="Genre" Nullable="true" />
+    <Property Type="Binary" Name="Cover" Nullable="true" />
+    <Property Type="Boolean" Name="Pending" Nullable="false" DefaultValue="false" />
+    <NavigationProperty Name="InsertRequest" Relationship="MediaLib.InsertRequestMedia" FromRole="Media" ToRole="InsertRequest" />
+    <NavigationProperty Name="Quote" Relationship="MediaLib.QuoteMedia" FromRole="Media" ToRole="Quote" />
+    <Property Type="Int32" Name="TotalRaters" Nullable="false" DefaultValue="0" />
+    <Property Type="Double" Name="AverageRating" Nullable="false" DefaultValue="0" />
+    <Property Type="DateTime" Name="AddingDate" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Movie" BaseType="MediaLib.Video">
+    <Property Type="DateTime" Name="ReleaseDate" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="MediaLib.BookMovie" FromRole="Movie" ToRole="Book" />
+    <NavigationProperty Name="QuoteMovie" Relationship="MediaLib.QuoteMovieMovie" FromRole="Movie" ToRole="QuoteMovie" />
+    <NavigationProperty Name="UserMovie" Relationship="MediaLib.UserMovieMovie" FromRole="Movie" ToRole="UserMovie" />
+  </EntityType>
+  <EntityType Name="Quote" Abstract="true">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="QuoteString" Nullable="false" />
+    <Property Type="String" Name="Language" Nullable="false" />
+    <Property Type="Int32" Name="Invocations" Nullable="false" DefaultValue="0" />
+    <NavigationProperty Name="Media" Relationship="MediaLib.QuoteMedia" FromRole="Quote" ToRole="Media" />
+    <Property Type="Int32" Name="MediaId" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="MediaLib.QuoteUser" FromRole="Quote" ToRole="User" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Character" Nullable="false" />
+    <Property Type="String" Name="OccurenceTime" Nullable="true" />
+    <Property Type="Int32" Name="Ranking" Nullable="true" />
+  </EntityType>
+  <EntityType Name="QuoteBook" BaseType="MediaLib.Quote">
+    <NavigationProperty Name="Book" Relationship="MediaLib.QuoteBookBook" FromRole="QuoteBook" ToRole="Book" />
+    <Property Type="Int32" Name="BookId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuoteMovie" BaseType="MediaLib.Quote">
+    <NavigationProperty Name="Movie" Relationship="MediaLib.QuoteMovieMovie" FromRole="QuoteMovie" ToRole="Movie" />
+    <Property Type="Int32" Name="MovieId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuoteTV_Show" BaseType="MediaLib.Quote">
+    <NavigationProperty Name="Episode" Relationship="MediaLib.QuoteTV_ShowEpisode" FromRole="QuoteTV_Show" ToRole="Episode" />
+    <Property Type="Int32" Name="EpisodeId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Number" Nullable="false" />
+    <NavigationProperty Name="TV_Show" Relationship="MediaLib.TV_ShowSeason" FromRole="Season" ToRole="TV_Show" />
+    <Property Type="Int32" Name="TV_ShowId" Nullable="false" />
+    <NavigationProperty Name="Episode" Relationship="MediaLib.EpisodeSeason" FromRole="Season" ToRole="Episode" />
+    <NavigationProperty Name="UserTV_Show" Relationship="MediaLib.UserTV_ShowSeason" FromRole="Season" ToRole="UserTV_Show" />
+  </EntityType>
+  <EntityType Name="TV_Show" BaseType="MediaLib.Video">
+    <Property Type="DateTime" Name="ShowBeginning" Nullable="false" />
+    <Property Type="DateTime" Name="ShowEnding" Nullable="true" />
+    <NavigationProperty Name="Season" Relationship="MediaLib.TV_ShowSeason" FromRole="TV_Show" ToRole="Season" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Username" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" />
+    <NavigationProperty Name="UserMedien" Relationship="MediaLib.UserUserMedien" FromRole="User" ToRole="UserMedien" />
+    <NavigationProperty Name="BorrowRequest" Relationship="MediaLib.RequestUser" FromRole="User" ToRole="BorrowRequest" />
+    <NavigationProperty Name="InsertRequest" Relationship="MediaLib.InsertRequestUser" FromRole="User" ToRole="InsertRequest" />
+    <NavigationProperty Name="Friends" Relationship="MediaLib.UserUser" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="BorrowedDetails" Relationship="MediaLib.BorrowedDetailsUser" FromRole="User" ToRole="BorrowedDetails" />
+    <NavigationProperty Name="Quote" Relationship="MediaLib.QuoteUser" FromRole="User" ToRole="Quote" />
+    <Property Type="Boolean" Name="Verified" Nullable="false" />
+    <NavigationProperty Name="Requestlist" Relationship="MediaLib.UserUser1" FromRole="User" ToRole="User1" />
+    <Property Type="Boolean" Name="Closed" Nullable="false" />
+    <Property Type="String" Name="VerificationCode" Nullable="true" DefaultValue="'notSet'" />
+  </EntityType>
+  <EntityType Name="UserMedia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="StoragePlace" Nullable="false" />
+    <Property Type="String" Name="MediaStatus" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="MediaLib.UserUserMedien" FromRole="UserMedien" ToRole="User" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <NavigationProperty Name="BorrowRequest" Relationship="MediaLib.RequestUserMedia" FromRole="UserMedia" ToRole="BorrowRequest" />
+    <NavigationProperty Name="BorrowedDetails" Relationship="MediaLib.BorrowedDetailsUserMedia" FromRole="UserMedia" ToRole="BorrowedDetails" />
+  </EntityType>
+  <EntityType Name="UserVideo" BaseType="MediaLib.UserMedia" Abstract="true">
+    <Property Type="String" Name="StorageType" Nullable="true" />
+  </EntityType>
+  <EntityType Name="UserBook" BaseType="MediaLib.UserMedia">
+    <NavigationProperty Name="Book" Relationship="MediaLib.UserBooksBook" FromRole="UserBooks" ToRole="Book" />
+    <Property Type="Int32" Name="BookId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Video" BaseType="MediaLib.Media" Abstract="true">
+    <NavigationProperty Name="Actor" Relationship="MediaLib.ActorVideo" FromRole="Video" ToRole="Actor" />
+  </EntityType>
+  <Association Name="TV_ShowSeason">
+    <End Type="MediaLib.TV_Show" Role="TV_Show" Multiplicity="1" />
+    <End Type="MediaLib.Season" Role="Season" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TV_Show">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Season">
+        <PropertyRef Name="TV_ShowId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserUserMedien">
+    <End Type="MediaLib.User" Role="User" Multiplicity="1" />
+    <End Type="MediaLib.UserMedia" Role="UserMedien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMedien">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EpisodeSeason">
+    <End Type="MediaLib.Episode" Role="Episode" Multiplicity="*" />
+    <End Type="MediaLib.Season" Role="Season" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Episode">
+        <PropertyRef Name="SeasonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserBooksBook">
+    <End Type="MediaLib.UserBook" Role="UserBooks" Multiplicity="*" />
+    <End Type="MediaLib.Book" Role="Book" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserBooks">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ActorVideo">
+    <End Type="MediaLib.Actor" Role="Actor" Multiplicity="*" />
+    <End Type="MediaLib.Video" Role="Video" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Author" BaseType="MediaLib.Person">
+    <NavigationProperty Name="Book" Relationship="MediaLib.AuthorBook" FromRole="Author" ToRole="Book" />
+  </EntityType>
+  <Association Name="BookMovie">
+    <End Type="MediaLib.Book" Role="Book" Multiplicity="0..1" />
+    <End Type="MediaLib.Movie" Role="Movie" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="Admin" BaseType="MediaLib.User" />
+  <EntityType Name="BorrowRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="User" Relationship="MediaLib.RequestUser" FromRole="BorrowRequest" ToRole="User" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserTo" Nullable="false" />
+    <NavigationProperty Name="UserMedia" Relationship="MediaLib.RequestUserMedia" FromRole="BorrowRequest" ToRole="UserMedia" />
+  </EntityType>
+  <Association Name="RequestUser">
+    <End Type="MediaLib.BorrowRequest" Role="BorrowRequest" Multiplicity="*" />
+    <End Type="MediaLib.User" Role="User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BorrowRequest">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RequestUserMedia">
+    <End Type="MediaLib.BorrowRequest" Role="BorrowRequest" Multiplicity="*" />
+    <End Type="MediaLib.UserMedia" Role="UserMedia" Multiplicity="1" />
+  </Association>
+  <EntityType Name="BorrowedDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Date" Nullable="false" />
+    <NavigationProperty Name="UserMedia" Relationship="MediaLib.BorrowedDetailsUserMedia" FromRole="BorrowedDetails" ToRole="UserMedia" />
+    <NavigationProperty Name="UserFrom" Relationship="MediaLib.BorrowedDetailsUser" FromRole="BorrowedDetails" ToRole="User" />
+    <Property Type="Int32" Name="BorrowedFromUserId" Nullable="false" />
+    <Property Type="DateTime" Name="DateOfReturn" Nullable="false" />
+    <Property Type="String" Name="NameTo" Nullable="true" />
+    <Property Type="Boolean" Name="TakeBackRequest" Nullable="false" />
+  </EntityType>
+  <Association Name="BorrowedDetailsUserMedia">
+    <End Type="MediaLib.BorrowedDetails" Role="BorrowedDetails" Multiplicity="*" />
+    <End Type="MediaLib.UserMedia" Role="UserMedia" Multiplicity="1" />
+  </Association>
+  <EntityType Name="InsertRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Media" Relationship="MediaLib.InsertRequestMedia" FromRole="InsertRequest" ToRole="Media" />
+    <NavigationProperty Name="User" Relationship="MediaLib.InsertRequestUser" FromRole="InsertRequest" ToRole="User" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="DateTime" Name="RequestDate" Nullable="false" />
+  </EntityType>
+  <Association Name="InsertRequestMedia">
+    <End Type="MediaLib.InsertRequest" Role="InsertRequest" Multiplicity="0..1" />
+    <End Type="MediaLib.Media" Role="Media" Multiplicity="1" />
+  </Association>
+  <Association Name="InsertRequestUser">
+    <End Type="MediaLib.InsertRequest" Role="InsertRequest" Multiplicity="*" />
+    <End Type="MediaLib.User" Role="User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InsertRequest">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserUser">
+    <End Type="MediaLib.User" Role="User" Multiplicity="*" />
+    <End Type="MediaLib.User" Role="User1" Multiplicity="*" />
+  </Association>
+  <Association Name="BorrowedDetailsUser">
+    <End Type="MediaLib.BorrowedDetails" Role="BorrowedDetails" Multiplicity="*" />
+    <End Type="MediaLib.User" Role="User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BorrowedDetails">
+        <PropertyRef Name="BorrowedFromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorBook">
+    <End Type="MediaLib.Author" Role="Author" Multiplicity="*" />
+    <End Type="MediaLib.Book" Role="Book" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Person" Abstract="true">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" Nullable="false" />
+    <Property Type="String" Name="LastName" Nullable="false" />
+  </EntityType>
+  <Association Name="QuoteMovieMovie">
+    <End Type="MediaLib.QuoteMovie" Role="QuoteMovie" Multiplicity="*" />
+    <End Type="MediaLib.Movie" Role="Movie" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuoteMovie">
+        <PropertyRef Name="MovieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QuoteTV_ShowEpisode">
+    <End Type="MediaLib.QuoteTV_Show" Role="QuoteTV_Show" Multiplicity="*" />
+    <End Type="MediaLib.Episode" Role="Episode" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Episode">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuoteTV_Show">
+        <PropertyRef Name="EpisodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QuoteBookBook">
+    <End Type="MediaLib.QuoteBook" Role="QuoteBook" Multiplicity="*" />
+    <End Type="MediaLib.Book" Role="Book" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuoteBook">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QuoteMedia">
+    <End Type="MediaLib.Quote" Role="Quote" Multiplicity="*" />
+    <End Type="MediaLib.Media" Role="Media" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Media">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="MediaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="QuoteUser">
+    <End Type="MediaLib.Quote" Role="Quote" Multiplicity="*" />
+    <End Type="MediaLib.User" Role="User" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserMovie" BaseType="MediaLib.UserVideo">
+    <NavigationProperty Name="Movie" Relationship="MediaLib.UserMovieMovie" FromRole="UserMovie" ToRole="Movie" />
+    <Property Type="Int32" Name="MovieId" Nullable="false" />
+  </EntityType>
+  <Association Name="UserMovieMovie">
+    <End Type="MediaLib.UserMovie" Role="UserMovie" Multiplicity="*" />
+    <End Type="MediaLib.Movie" Role="Movie" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserMovie">
+        <PropertyRef Name="MovieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserTV_Show" BaseType="MediaLib.UserVideo">
+    <NavigationProperty Name="Season" Relationship="MediaLib.UserTV_ShowSeason" FromRole="UserTV_Show" ToRole="Season" />
+    <Property Type="Int32" Name="SeasonId" Nullable="false" />
+  </EntityType>
+  <Association Name="UserTV_ShowSeason">
+    <End Type="MediaLib.UserTV_Show" Role="UserTV_Show" Multiplicity="*" />
+    <End Type="MediaLib.Season" Role="Season" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Season">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserTV_Show">
+        <PropertyRef Name="SeasonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserUser1">
+    <End Type="MediaLib.User" Role="User" Multiplicity="*" />
+    <End Type="MediaLib.User" Role="User1" Multiplicity="*" />
+  </Association>
+</Schema>

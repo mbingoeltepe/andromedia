@@ -1,0 +1,27 @@
+﻿#infoBox
+{
+	border-color: Black;
+	border-style: solid;
+	border-width: thin;
+	background-color: #7AC5CD;
+	width: auto;
+	float: right;
+}
+#titleSpace
+{
+	margin-left: 0px;	
+	width: auto;
+}
+#additionalInfoTable
+{
+	margin-top: 10px;
+	clear: right;
+	width: auto;
+	float: right;
+	table-layout: auto;
+}
+#quoteLink
+{
+	float: right;
+	font-style: oblique;
+}

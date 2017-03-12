@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 22.25" name="ORMapper">
+  <DataContextMoniker Name="/ORMapperDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4f6b1929-d58a-4217-9ee5-e7dda7b5d762" absoluteBounds="6.5, 16.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/ORMapperDataContext/ActorSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="181ea0cd-9989-4b79-a00f-f13a7511cc17" absoluteBounds="6.515, 17.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39d236c1-ac03-443d-9591-e754a5460ab0" absoluteBounds="3.5, 2.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/ORMapperDataContext/UserSet_Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1164b59-5e1b-42be-b3ac-1dc2db2182cb" absoluteBounds="3.515, 3.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41dc1071-a923-46e9-ba93-83018c434776" absoluteBounds="9.25, 15, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ORMapperDataContext/ActorVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46c1bd10-5872-43c8-bfb7-6498946f9f39" absoluteBounds="9.265, 15.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="417bdaa8-b43f-4801-849c-3ba4d3c6bc0f" absoluteBounds="0.75, 17.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/ORMapperDataContext/AuthorSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1679f87c-a1ee-4dfc-b1ed-eb61447765e0" absoluteBounds="0.765, 18.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48ae143f-9946-481d-9c48-5b1406f69098" absoluteBounds="14.25, 10.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ORMapperDataContext/BookQuoteBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08690083-71e0-4915-b5ec-4574e26dcdaf" absoluteBounds="14.265, 11.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62a72e8f-4ea5-4ca8-8247-e8acc61f91ca" absoluteBounds="3.5, 6.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/ORMapperDataContext/BorrowedDetailsSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9aacaa87-ed79-4bfc-bd36-075a0ab7aeb1" absoluteBounds="3.515, 6.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f84ecfa6-2bd6-4c1d-a9ec-21d786ad56fe" absoluteBounds="11.5, 20.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/ORMapperDataContext/EpisodeSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af16944e-dd6c-4ae1-b94e-d2fe828b15ad" absoluteBounds="11.515, 20.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a5953ced-576b-49d2-9be3-17833c0ba8c7" absoluteBounds="3.75, 14.625, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/ORMapperDataContext/MediaSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e9a608e-bf47-4b9b-8c63-660a735418c3" absoluteBounds="3.765, 15.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7092bf25-74a5-449e-82ec-923cd9bf03c4" absoluteBounds="3.5, 17.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/ORMapperDataContext/MediaSet_Book" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b972b9ca-367d-447e-bd95-72f4cea37ef0" absoluteBounds="3.515, 18.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea1a6429-69db-4276-8fa5-177962ad5e56" absoluteBounds="11.5, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ORMapperDataContext/MediaSet_Movie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8f7f4b9-43d7-4817-a4ea-f5dc1c8bfd37" absoluteBounds="11.515, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bdfd054f-548d-4431-9467-3f2f4a82f646" absoluteBounds="6, 20.25, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/ORMapperDataContext/MediaSet_TV_Show" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95ce2fc9-946b-4a2f-bcaf-252ab6e004f8" absoluteBounds="6.015, 20.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45a88acd-e249-4299-b460-d325acc24d25" absoluteBounds="6.5, 15.125, 2, 1.0016910807291648">
+      <DataClassMoniker Name="/ORMapperDataContext/MediaSet_Video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d41c8093-5b1f-4a9a-a6c6-76b9e50316a8" absoluteBounds="6.515, 15.585, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82715b50-595c-4e44-9ce5-4d391de754ba" absoluteBounds="14.25, 4.875, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteMovieMovie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b83a4636-e09f-4315-b76f-28bca13686a3" absoluteBounds="14.265, 5.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0a41596-9647-41a3-9a0d-a8d098e3bd39" absoluteBounds="12.5, 12.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteRankingSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61ebf717-be2d-403c-8eb5-31a0a25d8082" absoluteBounds="12.515, 13.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c27b754b-d70e-42c8-b7cf-e0614cd3f2cd" absoluteBounds="8.75, 4.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d771e7bc-bef5-4387-990d-758a2527a238" absoluteBounds="8.765, 5.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="26f065ef-3925-432e-8a88-c5a98cc09aa5" absoluteBounds="11.5, 3.25, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteSet_QuoteBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbb155c2-3e4f-4fb2-ab62-ec59504f4aa7" absoluteBounds="11.515, 3.71, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="558c0264-e375-4301-9241-bfaea1916e32" absoluteBounds="11.5, 5, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteSet_QuoteMovie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b23e1e61-758d-4218-a65b-1327fa9dc2c7" absoluteBounds="11.515, 5.46, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70076156-8547-4d2b-b142-9ab04fbf53dc" absoluteBounds="11.5, 6.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteSet_QuoteTV_Show" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1128054e-0a01-40ae-9fde-c829f6bdb822" absoluteBounds="11.515, 7.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c124a24-32b4-40d7-9c9f-a2ccdd62c9f7" absoluteBounds="14.25, 7.625, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/ORMapperDataContext/QuoteTV_ShowEpisode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4de2081d-fbac-4626-bb92-08cfaf9c076f" absoluteBounds="14.265, 8.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35f6e555-0067-4cf2-bcf8-cfde4e381c59" absoluteBounds="3.5, 8.625, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/ORMapperDataContext/RequestSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e5b2016-c565-40e2-82d9-cfdc809e63cb" absoluteBounds="3.515, 9.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="36ece17a-68da-47ee-b66b-e75d468e8bee" absoluteBounds="6.25, 9.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ORMapperDataContext/RequestUserMedia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="129236d4-e124-4ed9-9985-23ccf29bc232" absoluteBounds="6.265, 10.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b8ad347-b842-4a66-8c66-ac68bbf83495" absoluteBounds="8.75, 20.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/ORMapperDataContext/SeasonSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70e661ad-ba07-4de6-bbab-eb1a190729b9" absoluteBounds="8.765, 20.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="696e66af-4a45-4590-a98f-5b1b86450095" absoluteBounds="3.5, 4.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ORMapperDataContext/UserFriend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e73d6693-0790-4689-9f7e-32bd07aee723" absoluteBounds="3.515, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2301248c-ef0e-463f-b829-b342f19cc0ba" absoluteBounds="3.5, 10.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ORMapperDataContext/UserMediaSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bf99db9-9672-4943-a484-09755434ba3b" absoluteBounds="3.515, 11.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fec3cdc9-f7c8-485f-9392-883dbe5a13b5" absoluteBounds="6.25, 12, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ORMapperDataContext/UserMediaSet_UserBook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="215ef973-1cc0-44cc-bed0-21bd82f6fb7f" absoluteBounds="6.265, 12.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d196d9f5-597d-4673-8e8a-4544eee19bdc" absoluteBounds="9.25, 10.875, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/ORMapperDataContext/UserMediaSet_UserVideo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe07c563-9d3f-4e23-9547-387d1d4d9983" absoluteBounds="9.265, 11.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" absoluteBounds="0.75, 6.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/ORMapperDataContext/UserSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="405f5207-00fc-44bc-9295-d85242b994a7" absoluteBounds="0.765, 7.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 17.5681469726563); (10.25 : 17.5681469726563); (10.25 : 16.1939925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/ActorSet/ActorSet_ActorVideo" />
+      <nodes>
+        <classShapeMoniker Id="4f6b1929-d58a-4217-9ee5-e7dda7b5d762" />
+        <classShapeMoniker Id="41dc1071-a923-46e9-ba93-83018c434776" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 18.7925439453125); (6.16666616666667 : 18.7925439453125 : JumpStart); (6.42708333333333 : 18.7925439453125 : JumpEnd); (12.7916661666667 : 18.7925439453125 : JumpStart); (12.9583328333333 : 18.7925439453125 : JumpEnd); (15.40625 : 18.7925439453125); (15.40625 : 11.8189925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Book/MediaSet_Book_BookQuoteBook" />
+      <nodes>
+        <classShapeMoniker Id="7092bf25-74a5-449e-82ec-923cd9bf03c4" />
+        <classShapeMoniker Id="48ae143f-9946-481d-9c48-5b1406f69098" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 18.5681469726563); (3.5 : 18.5681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/AuthorSet/AuthorSet_MediaSet_Book" />
+      <nodes>
+        <classShapeMoniker Id="417bdaa8-b43f-4801-849c-3ba4d3c6bc0f" />
+        <classShapeMoniker Id="7092bf25-74a5-449e-82ec-923cd9bf03c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.625 : 16.5881982421875); (4.625 : 17.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet/MediaSet_MediaSet_Book" />
+      <nodes>
+        <classShapeMoniker Id="a5953ced-576b-49d2-9be3-17833c0ba8c7" />
+        <classShapeMoniker Id="7092bf25-74a5-449e-82ec-923cd9bf03c4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 18.5269164453125); (6.16666616666667 : 18.5269164453125 : JumpStart); (6.42708333333333 : 18.5269164453125 : JumpEnd); (12.25 : 18.5269164453125); (12.25 : 8.00169108072917); (11.25 : 8.00169108072917); (11.25 : 2.5112939453125); (12.5 : 2.5112939453125); (12.5 : 2.1362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Book/MediaSet_Book_MediaSet_Movie" />
+      <nodes>
+        <classShapeMoniker Id="7092bf25-74a5-449e-82ec-923cd9bf03c4" />
+        <classShapeMoniker Id="ea1a6429-69db-4276-8fa5-177962ad5e56" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 15.6258455403646); (9.25 : 15.6258455403646)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Video/MediaSet_Video_ActorVideo" />
+      <nodes>
+        <classShapeMoniker Id="45a88acd-e249-4299-b460-d325acc24d25" />
+        <classShapeMoniker Id="41dc1071-a923-46e9-ba93-83018c434776" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 15.125); (8.40625 : 1.44314697265625); (11.5 : 1.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Video/MediaSet_Video_MediaSet_Movie" />
+      <nodes>
+        <classShapeMoniker Id="45a88acd-e249-4299-b460-d325acc24d25" />
+        <classShapeMoniker Id="ea1a6429-69db-4276-8fa5-177962ad5e56" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 15.6258455403646); (6.42708333333333 : 15.6258455403646 : JumpStart); (6.26041666666667 : 15.6258455403646 : JumpEnd); (6.2499995 : 15.6258455403646); (6.2499995 : 20.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Video/MediaSet_Video_MediaSet_TV_Show" />
+      <nodes>
+        <classShapeMoniker Id="45a88acd-e249-4299-b460-d325acc24d25" />
+        <classShapeMoniker Id="bdfd054f-548d-4431-9467-3f2f4a82f646" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 15.3129227701823); (6.26041666666667 : 15.3129227701823 : JumpStart); (6.42708333333333 : 15.3129227701823 : JumpEnd); (6.5 : 15.3129227701823)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet/MediaSet_MediaSet_Video" />
+      <nodes>
+        <classShapeMoniker Id="a5953ced-576b-49d2-9be3-17833c0ba8c7" />
+        <classShapeMoniker Id="45a88acd-e249-4299-b460-d325acc24d25" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 1.44314697265625); (15.25 : 1.44314697265625); (15.25 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Movie/MediaSet_Movie_QuoteMovieMovie" />
+      <nodes>
+        <classShapeMoniker Id="ea1a6429-69db-4276-8fa5-177962ad5e56" />
+        <classShapeMoniker Id="82715b50-595c-4e44-9ce5-4d391de754ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 16.4223453776042); (6.16666616666667 : 16.4223453776042 : JumpStart); (6.42708333333333 : 16.4223453776042 : JumpEnd); (10.1666666666667 : 16.4223453776042 : JumpStart); (10.3333333333333 : 16.4223453776042 : JumpEnd); (12.1666666666667 : 16.4223453776042 : JumpStart); (12.3333333333333 : 16.4223453776042 : JumpEnd); (12.7916661666667 : 16.4223453776042 : JumpStart); (12.9583328333333 : 16.4223453776042 : JumpEnd); (13.5 : 16.4223453776042); (13.5 : 14.3285953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet/MediaSet_QuoteRankingSet" />
+      <nodes>
+        <classShapeMoniker Id="a5953ced-576b-49d2-9be3-17833c0ba8c7" />
+        <classShapeMoniker Id="b0a41596-9647-41a3-9a0d-a8d098e3bd39" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.96875 : 6.20359537760417); (8.96875 : 13.5392976888021); (12.1666666666667 : 13.5392976888021 : JumpStart); (12.3333333333333 : 13.5392976888021 : JumpEnd); (12.5 : 13.5392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet/QuoteSet_QuoteRankingSet" />
+      <nodes>
+        <classShapeMoniker Id="c27b754b-d70e-42c8-b7cf-e0614cd3f2cd" />
+        <classShapeMoniker Id="b0a41596-9647-41a3-9a0d-a8d098e3bd39" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 4.25091954912861); (13.875 : 4.62591954912861); (13.875 : 10.25); (13.9410744349011 : 10.3160744349011 : JumpStart); (14.0589255650989 : 10.4339255650989 : JumpEnd); (14.25 : 10.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet_QuoteBook/QuoteSet_QuoteBook_BookQuoteBook" />
+      <nodes>
+        <classShapeMoniker Id="26f065ef-3925-432e-8a88-c5a98cc09aa5" />
+        <classShapeMoniker Id="48ae143f-9946-481d-9c48-5b1406f69098" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.75 : 4.625); (9.75 : 3.75084554036458); (11.1666666666667 : 3.75084554036458 : JumpStart); (11.3333333333333 : 3.75084554036458 : JumpEnd); (11.5 : 3.75084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet/QuoteSet_QuoteSet_QuoteBook" />
+      <nodes>
+        <classShapeMoniker Id="c27b754b-d70e-42c8-b7cf-e0614cd3f2cd" />
+        <classShapeMoniker Id="26f065ef-3925-432e-8a88-c5a98cc09aa5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.5 : 5.50084554036458); (13.7916666666667 : 5.50084554036458 : JumpStart); (13.9583333333333 : 5.50084554036458 : JumpEnd); (14.25 : 5.50084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet_QuoteMovie/QuoteSet_QuoteMovie_QuoteMovieMovie" />
+      <nodes>
+        <classShapeMoniker Id="558c0264-e375-4301-9241-bfaea1916e32" />
+        <classShapeMoniker Id="82715b50-595c-4e44-9ce5-4d391de754ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 5.50084554036458); (11.1666666666667 : 5.50084554036458 : JumpStart); (11.3333333333333 : 5.50084554036458 : JumpEnd); (11.5 : 5.50084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet/QuoteSet_QuoteSet_QuoteMovie" />
+      <nodes>
+        <classShapeMoniker Id="c27b754b-d70e-42c8-b7cf-e0614cd3f2cd" />
+        <classShapeMoniker Id="558c0264-e375-4301-9241-bfaea1916e32" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.8906275 : 6.20359537760417); (9.8906275 : 7.25084554036458); (11.1666666666667 : 7.25084554036458 : JumpStart); (11.3333333333333 : 7.25084554036458 : JumpEnd); (11.5 : 7.25084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet/QuoteSet_QuoteSet_QuoteTV_Show" />
+      <nodes>
+        <classShapeMoniker Id="c27b754b-d70e-42c8-b7cf-e0614cd3f2cd" />
+        <classShapeMoniker Id="70076156-8547-4d2b-b142-9ab04fbf53dc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.8749995 : 20.5); (12.8749995 : 14.5785953776042); (13.4166666666667 : 14.5785953776042 : JumpStart); (13.5833333333333 : 14.5785953776042 : JumpEnd); (14.75 : 14.5785953776042); (14.75 : 12.0689925130208); (14 : 12.0689925130208); (14 : 8.22199625651042); (14.25 : 8.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/EpisodeSet/EpisodeSet_QuoteTV_ShowEpisode" />
+      <nodes>
+        <classShapeMoniker Id="f84ecfa6-2bd6-4c1d-a9ec-21d786ad56fe" />
+        <classShapeMoniker Id="3c124a24-32b4-40d7-9c9f-a2ccdd62c9f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.8749995 : 7.75169108072917); (12.8749995 : 8.55174638476562); (13.7916666666667 : 8.55174638476562 : JumpStart); (14.0833333333333 : 8.55174638476562 : JumpEnd); (14.25 : 8.55174638476562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/QuoteSet_QuoteTV_Show/QuoteSet_QuoteTV_Show_QuoteTV_ShowEpisode" />
+      <nodes>
+        <classShapeMoniker Id="70076156-8547-4d2b-b142-9ab04fbf53dc" />
+        <classShapeMoniker Id="3c124a24-32b4-40d7-9c9f-a2ccdd62c9f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.2499995); (7.25 : 9.2499995); (7.25 : 9.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/RequestSet/RequestSet_RequestUserMedia" />
+      <nodes>
+        <classShapeMoniker Id="35f6e555-0067-4cf2-bcf8-cfde4e381c59" />
+        <classShapeMoniker Id="36ece17a-68da-47ee-b66b-e75d468e8bee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 21.1931469726563); (11.5 : 21.1931469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/SeasonSet/SeasonSet_EpisodeSet" />
+      <nodes>
+        <classShapeMoniker Id="2b8ad347-b842-4a66-8c66-ac68bbf83495" />
+        <classShapeMoniker Id="f84ecfa6-2bd6-4c1d-a9ec-21d786ad56fe" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 21.1931469726563); (8.75 : 21.1931469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_TV_Show/MediaSet_TV_Show_SeasonSet" />
+      <nodes>
+        <classShapeMoniker Id="bdfd054f-548d-4431-9467-3f2f4a82f646" />
+        <classShapeMoniker Id="2b8ad347-b842-4a66-8c66-ac68bbf83495" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.9094962565104); (6.25 : 10.9094962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserMediaSet/UserMediaSet_RequestUserMedia" />
+      <nodes>
+        <classShapeMoniker Id="2301248c-ef0e-463f-b829-b342f19cc0ba" />
+        <classShapeMoniker Id="36ece17a-68da-47ee-b66b-e75d468e8bee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.1642976888021); (6.25 : 12.1642976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserMediaSet/UserMediaSet_UserMediaSet_UserBook" />
+      <nodes>
+        <classShapeMoniker Id="2301248c-ef0e-463f-b829-b342f19cc0ba" />
+        <classShapeMoniker Id="fec3cdc9-f7c8-485f-9392-883dbe5a13b5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 19.0581714453125); (6.16666616666667 : 19.0581714453125 : JumpStart); (6.33333283333333 : 19.0581714453125 : JumpEnd); (6.34375 : 19.0581714453125); (6.34375 : 13.1939925130208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Book/MediaSet_Book_UserMediaSet_UserBook" />
+      <nodes>
+        <classShapeMoniker Id="7092bf25-74a5-449e-82ec-923cd9bf03c4" />
+        <classShapeMoniker Id="fec3cdc9-f7c8-485f-9392-883dbe5a13b5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.5344962565104); (8.32291666666667 : 11.5344962565104 : JumpStart); (8.48958333333333 : 11.5344962565104 : JumpEnd); (8.88541666666667 : 11.5344962565104 : JumpStart); (9.05208333333333 : 11.5344962565104 : JumpEnd); (9.25 : 11.5344962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserMediaSet/UserMediaSet_UserMediaSet_UserVideo" />
+      <nodes>
+        <classShapeMoniker Id="2301248c-ef0e-463f-b829-b342f19cc0ba" />
+        <classShapeMoniker Id="d196d9f5-597d-4673-8e8a-4544eee19bdc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.4375025 : 15.125); (8.4375025 : 11.7672506282552); (8.88541666666667 : 11.7672506282552 : JumpStart); (9.05208333333333 : 11.7672506282552 : JumpEnd); (9.25 : 11.7672506282552)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/MediaSet_Video/MediaSet_Video_UserMediaSet_UserVideo" />
+      <nodes>
+        <classShapeMoniker Id="45a88acd-e249-4299-b460-d325acc24d25" />
+        <classShapeMoniker Id="d196d9f5-597d-4673-8e8a-4544eee19bdc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 6.875); (1.75 : 3.25084554036458); (3.5 : 3.25084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserSet/UserSet_UserSet_Admin" />
+      <nodes>
+        <classShapeMoniker Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" />
+        <classShapeMoniker Id="39d236c1-ac03-443d-9591-e754a5460ab0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.38064697265625); (3.5 : 7.38064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserSet/UserSet_BorrowedDetailsSet" />
+      <nodes>
+        <classShapeMoniker Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" />
+        <classShapeMoniker Id="62a72e8f-4ea5-4ca8-8247-e8acc61f91ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 8.2612939453125); (1.75 : 9.31814697265625); (2.19791916666667 : 9.31814697265625 : JumpStart); (2.36458583333333 : 9.31814697265625 : JumpEnd); (3.5 : 9.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserSet/UserSet_RequestSet" />
+      <nodes>
+        <classShapeMoniker Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" />
+        <classShapeMoniker Id="35f6e555-0067-4cf2-bcf8-cfde4e381c59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 6.875); (2.2812525 : 5.09699625651042); (3.5 : 5.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserSet/UserSet_UserFriend" />
+      <nodes>
+        <classShapeMoniker Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" />
+        <classShapeMoniker Id="696e66af-4a45-4590-a98f-5b1b86450095" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.2187475 : 6.875); (1.2187475 : 5.42674688476563); (1.66666666666667 : 5.42674688476562 : JumpStart); (1.83333333333333 : 5.42674688476563 : JumpEnd); (2.19791916666667 : 5.42674688476562 : JumpStart); (2.36458583333333 : 5.42674688476563 : JumpEnd); (3.5 : 5.42674688476563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserSet/UserSet_UserFriend1" />
+      <nodes>
+        <classShapeMoniker Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" />
+        <classShapeMoniker Id="696e66af-4a45-4590-a98f-5b1b86450095" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.2812525 : 8.2612939453125); (2.2812525 : 11.5392976888021); (3.5 : 11.5392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ORMapperDataContext/UserSet/UserSet_UserMediaSet" />
+      <nodes>
+        <classShapeMoniker Id="7993df1c-3d15-43e3-acfa-fc4c5a680855" />
+        <classShapeMoniker Id="2301248c-ef0e-463f-b829-b342f19cc0ba" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

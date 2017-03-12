@@ -1,0 +1,15 @@
+C:\Users\Stefan\documents\visual studio 2010\Projects\MovieLibrary\MovieLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Stefan\documents\visual studio 2010\Projects\MovieLibrary\MovieLibrary\bin\MovieLibrary.dll
+C:\Users\Stefan\documents\visual studio 2010\Projects\MovieLibrary\MovieLibrary\bin\MovieLibrary.pdb
+C:\Users\Stefan\documents\visual studio 2010\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.dll
+C:\Users\Stefan\documents\visual studio 2010\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.pdb
+C:\Users\Ber-Ard\Desktop\MovieLibrary\MovieLibrary\bin\MovieLibrary.dll
+C:\Users\Ber-Ard\Desktop\MovieLibrary\MovieLibrary\bin\MovieLibrary.pdb
+C:\Users\Ber-Ard\Desktop\MovieLibrary\MovieLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ber-Ard\Desktop\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.dll
+C:\Users\Ber-Ard\Desktop\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.pdb
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary\bin\MovieLibrary.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary\bin\MovieLibrary.pdb
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.dll
+C:\Users\Ber-Ard\Documents\Visual Studio 2010\Projects\MovieLibrary\MovieLibrary\obj\Debug\MovieLibrary.pdb

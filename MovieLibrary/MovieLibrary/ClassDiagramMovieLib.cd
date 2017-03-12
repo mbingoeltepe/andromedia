@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="MovieLibrary.Models.Actor">
+    <Position X="5.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\Actor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.Video">
+    <Position X="0.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Video.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.Medium">
+    <Position X="1.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAAAAAAAQAAA=</HashCode>
+      <FileName>Models\Medium.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.Movie">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\Movie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.Quote">
+    <Position X="7.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAEAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Quote.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.QuoteRanking">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAAAg=</HashCode>
+      <FileName>Models\QuoteRanking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.TV_Show">
+    <Position X="3" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAABAIEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TV-Show.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.User">
+    <Position X="5.25" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAEAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.UserVideos">
+    <Position X="14" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\UserVideos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.VerborgtDetails">
+    <Position X="8.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\VerborgtDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.Book">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.UserBooks">
+    <Position X="11.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserBooks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovieLibrary.Models.UserMedien">
+    <Position X="11.5" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAABAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserMedien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="MovieLibrary.Models.AufbewahrungsOrt">
+    <Position X="5.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAAAAAAAAAAAAAEBAAEAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Models\AufbewahrungsOrt.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.Berechtigung">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAEAAAAAAAAAA=</HashCode>
+      <FileName>Models\Berechtigung.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.Datentraeger">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAQAAAAAAACAAAAAQAAAAAAACA=</HashCode>
+      <FileName>Models\Datentraeger.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.Language">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Language.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.LoginStatus">
+    <Position X="7.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAQAAAA=</HashCode>
+      <FileName>Models\LoginStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.MediumStatus">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MediumStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.MovieGenre">
+    <Position X="5.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABQAAAAAIAAARAAAAAEAAAEA=</HashCode>
+      <FileName>Models\MovieGenre.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MovieLibrary.Models.Rating">
+    <Position X="7.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAIAAAAABAAABAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\Rating.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

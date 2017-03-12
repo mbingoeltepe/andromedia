@@ -1,0 +1,626 @@
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+body
+{
+    font-family: Tahoma;
+    font-size: 12px;    
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.whiteFont, .whiteFont:visited, .whiteFont.active
+{
+    color: White;
+}
+
+.whiteFont:Hover
+{
+    color: White;
+    text-decoration: underline;
+}
+
+.searchbar
+{
+	text-align: center;
+	padding: 0 2px 0 0;
+}
+.validation-summary-valid
+{
+    display: none;
+}
+
+.userMediaBox
+{
+    border-color: #cdc8b1;
+    border-width: 1px;
+    border-style: solid;
+    width: 33%;
+    margin: 1%;
+    min-width: 30%;
+    min-height: 300px;
+    float: left;
+}
+
+.alignRight
+{
+	float: right; 
+}
+
+.alignLeft
+{
+    float: left;
+}
+
+.alignLeft250
+{
+	position: absolute;
+	left: 250px;
+	top: 208px;
+	height: 168px;
+	width: 1058px;
+}
+
+.font
+{
+    font-size: small;    
+    
+}
+
+.inlinePadding
+{
+	padding: 0 2px 0 0;
+ 
+}
+
+.search
+{
+    border-bottom: 1px #5C87B2 solid;
+    padding: 0 0 2px;
+    position: relative;
+    margin: 0;
+}
+
+a:link, a:hover, a:visited, a:active {text-decoration: none;}
+
+.defaultLink:link, .defaultLink:hover, .defaultLink:visited, .defaultLink:active {text-decoration: none; color: Blue;}
+
+table
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#userLinksProfile
+{
+    float: left;    
+}
+
+#top ul
+{
+	
+    list-style-type: none;
+    display: block;
+    color: Black;
+    float: right;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.userMediaList
+{
+    float: left;
+    margin-left: 1px;
+}
+
+.userList
+{
+    float: left;
+    margin-left: 1px;
+}
+
+.quoteList
+{
+    float: left;
+    margin-left: 1px;
+}
+
+#top li
+{
+	right: 0px;
+	display: block;
+	padding: 5px;
+	color: White;
+}
+
+.h2
+{
+	margin-left: -3%;
+	margin-top: 35px;
+}
+
+.lefty
+{
+	margin-left: -10px;
+	margin-top: 35px;
+}
+
+.indent20
+{
+	margin-left: 20px;
+	margin-top: 35px;
+}
+
+
+#homeLink
+{
+    margin-top: 10px;
+	color: White;
+	text-decoration: none;
+	margin-left:50px;
+	color:White;
+    width: 204px;
+    font-family: Tahoma;
+}
+
+/*#stylishLink
+{
+    padding: 5px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 0.3em;
+    background-color: #e8eef4;
+    color: #034af3;
+}*/
+
+#top
+{
+    background-color: #318CE7;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    height: 75px;
+    min-width: 720px;
+}
+
+html, body
+{
+	height: 90%;
+	padding-bottom: 30px;
+	margin-bottom: 100px;
+}
+
+#main
+{
+    margin-top: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cdc8b1;
+    width: 70%;
+    min-height: 90%;
+    min-width: 500px;
+    margin-left: 180px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main
+{
+    padding-left: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #318CE7;
+    
+}
+
+#footer
+{
+    width: 150px;
+    margin: 10px auto auto auto;
+    font-size: smaller;
+}
+
+#spacer
+{
+    width: 150px;
+    margin: 500px auto auto auto;
+    font-size: smaller;
+}
+
+#loginDiv
+{
+	visibility:visible;
+	color: Black;	
+	
+}
+
+#sidebar
+{
+	padding-top: 20px;
+    margin-top: 10px;
+    float: left;
+    width: 160px;
+    min-width: 160px;
+}
+
+#sidebar li
+{
+	padding-top: 3px;
+}
+
+hr
+{
+	border: none; height: 1px;
+	color: #ccc; background: #ccc;
+}
+
+.sideBarHeading
+{
+	margin-left: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.sideBarHeading2
+{
+	margin-left: 25px;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 3px;
+	color: Blue;
+}
+
+#topQuotes li
+{
+    margin: 0.5em;
+}
+
+.pageUI
+{
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.pageUI li
+{
+    font-size: 1.2em;
+    display: inline;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.linkAlignCentral
+{
+    top: 0px;
+    text-align:center;    
+}
+
+.actionLink
+{
+    color: White;
+    background-color: #318CE7;
+}
+
+/*
+:hover.actionLink
+{
+    color: #318CE7;
+    background-color: White;
+}
+*/
+
+/************************************
+*********** Details-Views ***********
+*************************************/
+
+#infoBox
+{
+	border-color: Black;
+	border-style: solid;
+	border-width: thin;
+	background-color: #7AC5CD;
+	width: auto;
+	float: right;
+	padding: 20px;
+}
+#titleSpace
+{
+	margin-left: 0px;	
+	width: auto;
+	float: left;
+}
+.additionalInfoTable
+{
+	clear: right;
+	width: auto;
+	float: right;
+	margin: 0px 0px 20px 20px;
+	width: 200px;
+}
+
+#quoteLink, #quoteLink:link, #quoteLink:active, #quoteLink:hover, #quoteLink:visited,
+.quoteLink, .quoteLink:link, .quoteLink:active, .quoteLink:hover, .quoteLink:visited
+{
+    color: Blue;
+	float: left;
+	font-weight: bolder;
+	font-size: large;
+}
+
+/*******AddMediaToAndromedia*********/
+.addMedia label
+{
+	text-align: right;
+	float: left;
+}
+
+/****** UserMedia **********/
+
+.UserMedia .UMAttribute, #addUserMedia label
+{
+    text-align:right;
+    float:left;
+    width:9em;
+    margin-right: 0.5em;
+    display:inline;
+}
+
+.UserMedia .info
+{
+    margin:0.5em 0 0.5em 0;
+}
+
+.UserMedia h4, #addUserMedia h4
+{
+    margin: 0 0 0.5em 0;
+}
+
+.UserMedia a
+{
+    display:block;
+}
+
+.UserMedia
+{
+    margin-bottom: 1em;
+}
+
+
+/****** addUserMedia **********/
+
+#addUserMedia label    
+{
+  margin: 0.5em 0.5em 0.5em 0;
+  clear:both;
+}
+
+#addUserMedia select 
+{
+    float:left;
+    display:block;
+    margin: 0.2em 0 0.2em 0;
+}
+
+#addUserMedia fieldset  
+{
+    border:0; 
+}
+
+/********addBookRefToMovie*******/
+#addBookToMovie
+{
+    border: 1;
+    float: right;   
+    margin-top: 10px;
+    clear: right;
+}
+
+/****** addQuote **********/
+
+#addQuote label    
+{
+  text-align:right;
+  float:left;
+  width:6em;
+  margin: 0.1em 0.1em 0.1em 0;
+  clear:both;
+}
+
+#addQuote select
+{
+    float:left;
+    display:block;
+    margin: 0.2em 0 0.2em 0;
+}
+
+#addQuote fieldset  
+{
+    border:0; 
+}
+
+/*******userMediaSearchbox*******/
+.userMediaSearchbox
+{
+	padding: 15px;
+	border-width: 1px;
+	border-color: Black;
+	border-style: solid;
+	float: right;
+	display: inline;
+		
+}
+
+/*******userSearchbox*******/
+.userSearchbox
+{
+	padding: 15px;
+	border-width: 1px;
+	border-color: Black;
+	border-style: solid;
+	float: right;
+	display: inline;
+		
+}
+
+/*******quoteSearchbox*******/
+.quoteSearchbox
+{
+	padding: 15px;
+	border-width: 1px;
+	border-color: Black;
+	border-style: solid;
+	float: right;
+	display: inline;
+		
+}
+
+/******* form layouting ******/
+.formLayout
+{
+    background-color: #f3f3f3;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    width: 300px;
+}
+    
+.formLayout label, .formLayout input, .formLayout select
+{
+    display: block;
+    width: 120px;
+    float: left;
+    margin-bottom: 10px;
+}
+ 
+.formLayout label, .formLayout2 label
+{
+    text-align: right;
+    padding-right: 20px;
+}
+
+.formLayout br, .formLayout2 br
+{
+    /*clear: left;*/
+}
+
+.formLayout2 label
+{
+    display: block;
+    width: 100px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.formLayout2 input
+{
+    display: block;
+    width: 400px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.formLayoutRegister
+{
+    background-color: #f3f3f3;
+    border: solid 1px #a1a1a1;
+    padding: 10px;
+    width: 450px;
+}
+    
+.formLayoutRegister input, .formLayoutRegister select
+{
+    display: block;
+    width: 200px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.formLayoutRegister label
+{
+	display: block;
+    width: 180px;
+    text-align: right;
+    padding-right: 20px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+/********* Insert Requests*********/
+
+.insertRequest label
+{
+    float:left;
+    display:block;
+    clear:both;
+    width: 9em;
+    margin: 0.5em;
+    text-align: right;
+}
+
+.insertRequest select, .insertRequest input[type=text], .insertRequest .info .infoText, .field-validation-error
+{
+    display: block;
+    float: left;
+    margin: 0.5em;
+}
+
+.insertRequest input[type=submit]  
+{
+    margin: 0.5em 0 0 0;
+}
+
+.insertRequest h4
+{
+    margin: 0.5em;
+}
+
+.insertRequest .info label
+{
+    margin: 0.2em;
+    width: 4em;
+    font-weight: bold;
+}
+
+.insertRequest .info .infoText
+{
+    margin: 0.2em;
+    padding-left: 0.5em;
+}
+
+.insertRequest .info
+{
+    margin-bottom: 1em;
+}
+
+#requests_AlleAnzeigen
+{
+    margin-top: 0.5em;
+    padding: 0;
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+/**********************************/
